@@ -36,7 +36,7 @@ export function IntroExperience() {
 
   const handleFinished = async () => {
     markIntroSeen();
-    await navigateWithTransition("/", "Accueil");
+    await navigateWithTransition("/");
     setPhase("done");
   };
 

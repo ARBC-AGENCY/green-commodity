@@ -9,6 +9,7 @@ import {
 } from "react";
 import { useRouter } from "next/navigation";
 import { getRouteLabel, getRouteTrait } from "@/lib/routes";
+import { useLocale } from "@/components/i18n/LocaleProvider";
 import {
   PageTransitionOverlay,
   type PageTransitionOverlayHandle,
@@ -31,6 +32,7 @@ const FALLBACK_REVEAL_MS = 500;
 
 export function TransitionProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
+  const { locale } = useLocale();
   const overlayRef = useRef<PageTransitionOverlayHandle>(null);
   const pendingRef = useRef(false);
   const fallbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -55,7 +57,7 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
       pendingRef.current = true;
       const traitSrc = getRouteTrait(href);
       await overlayRef.current.coverSingleLine(
-        label ?? getRouteLabel(href),
+        label ?? getRouteLabel(href, locale),
         trait ?? (traitSrc ? { src: traitSrc } : undefined),
       );
       router.push(href);
@@ -65,7 +67,7 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
         notifyRouteMounted();
       }, FALLBACK_REVEAL_MS);
     },
-    [router, clearFallback, notifyRouteMounted]
+    [router, locale, clearFallback, notifyRouteMounted]
   );
 
   return (

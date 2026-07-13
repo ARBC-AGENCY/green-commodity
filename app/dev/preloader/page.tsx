@@ -5,12 +5,16 @@ import {
   PageTransitionOverlay,
   type PageTransitionOverlayHandle,
 } from "@/components/transition/PageTransitionOverlay";
+import { useLocale } from "@/components/i18n/LocaleProvider";
+import { getRouteLabel } from "@/lib/routes";
 
 const buttonClass =
   "rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700";
 
 export default function PreloaderPreviewPage() {
   const overlayRef = useRef<PageTransitionOverlayHandle>(null);
+  const { locale } = useLocale();
+  const homeLabel = getRouteLabel("/", locale);
 
   return (
     <div className="min-h-dvh bg-zinc-100 p-10">
@@ -46,15 +50,15 @@ export default function PreloaderPreviewPage() {
         <button
           type="button"
           className={buttonClass}
-          onClick={() => overlayRef.current?.coverSingleLine("Accueil")}
+          onClick={() => overlayRef.current?.coverSingleLine(homeLabel)}
         >
-          3. Cover single line (Accueil)
+          3. Cover single line ({homeLabel})
         </button>
         <button
           type="button"
           className={buttonClass}
           onClick={() =>
-            overlayRef.current?.coverSingleLine("Accueil", {
+            overlayRef.current?.coverSingleLine(homeLabel, {
               src: "TRAIT 2.svg",
             })
           }

@@ -1,5 +1,10 @@
-export const ROUTE_LABELS: Record<string, string> = {
-  "/": "Accueil",
+import type { Locale } from "./i18n/config";
+import { dictionaries } from "./i18n/dictionaries";
+
+/** Per-locale label for a route, used for breadcrumbs and transition text. */
+export const ROUTE_LABELS: Record<Locale, Record<string, string>> = {
+  en: { "/": dictionaries.en.common.home },
+  fr: { "/": dictionaries.fr.common.home },
 };
 
 /** Filename (in public/SVG) of the trait/underline brush to draw under a
@@ -15,11 +20,12 @@ function humanize(segment: string) {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
-export function getRouteLabel(pathname: string) {
-  if (ROUTE_LABELS[pathname]) return ROUTE_LABELS[pathname];
+export function getRouteLabel(pathname: string, locale: Locale) {
+  const labels = ROUTE_LABELS[locale];
+  if (labels[pathname]) return labels[pathname];
 
   const lastSegment = pathname.split("/").filter(Boolean).pop();
-  return lastSegment ? humanize(lastSegment) : ROUTE_LABELS["/"];
+  return lastSegment ? humanize(lastSegment) : labels["/"];
 }
 
 export function getRouteTrait(pathname: string): string | undefined {

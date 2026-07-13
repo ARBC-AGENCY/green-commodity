@@ -5,6 +5,7 @@ import Script from "next/script";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Volume2, VolumeX } from "lucide-react";
+import { useTranslations } from "@/components/i18n/LocaleProvider";
 
 const STREAM_VIDEO_ID = "c77c074d8da70443dd38c706e8c0c5e8";
 const STREAM_CUSTOMER = "customer-sjpsqgc6n64xivkb";
@@ -29,6 +30,7 @@ type IntroVideoProps = {
 };
 
 export function IntroVideo({ onReady, onFinished }: IntroVideoProps) {
+  const t = useTranslations();
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const exploreRef = useRef<HTMLButtonElement>(null);
   const playerRef = useRef<StreamPlayer | null>(null);
@@ -107,7 +109,7 @@ export function IntroVideo({ onReady, onFinished }: IntroVideoProps) {
       <button
         type="button"
         onClick={toggleMuted}
-        aria-label={muted ? "Activer le son" : "Couper le son"}
+        aria-label={muted ? t.intro.enableSound : t.intro.disableSound}
         className="absolute bottom-10 right-6 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/40 text-orange backdrop-blur transition-colors hover:bg-black/60"
       >
         {muted ? <VolumeX size={20} /> : <Volume2 size={20} />}
@@ -120,7 +122,7 @@ export function IntroVideo({ onReady, onFinished }: IntroVideoProps) {
           onClick={onFinished}
           className="absolute cursor-pointer bottom-10 left-1/2 z-10 -translate-x-1/2 rounded-full border border-orange hover:bg-orange px-8 py-3 font-lovelace font-medium text-white opacity-0 transition-colors hover:brightness-110"
         >
-          Explorer
+          {t.intro.explore}
         </button>
       )}
     </div>
