@@ -8,15 +8,20 @@ import {
   type ReactNode,
 } from "react";
 import { useRouter } from "next/navigation";
-import { getRouteLabel } from "@/lib/routes";
+import { getRouteLabel, getRouteTrait } from "@/lib/routes";
 import {
   PageTransitionOverlay,
   type PageTransitionOverlayHandle,
+  type TraitConfig,
 } from "./PageTransitionOverlay";
 
 type TransitionContextValue = {
   overlay: React.RefObject<PageTransitionOverlayHandle | null>;
-  navigateWithTransition: (href: string, label?: string) => Promise<void>;
+  navigateWithTransition: (
+    href: string,
+    label?: string,
+    trait?: TraitConfig,
+  ) => Promise<void>;
   notifyRouteMounted: () => void;
 };
 
@@ -45,10 +50,14 @@ export function TransitionProvider({ children }: { children: ReactNode }) {
   }, [clearFallback]);
 
   const navigateWithTransition = useCallback(
-    async (href: string, label?: string) => {
+    async (href: string, label?: string, trait?: TraitConfig) => {
       if (!overlayRef.current) return;
       pendingRef.current = true;
-      await overlayRef.current.coverSingleLine(label ?? getRouteLabel(href));
+      const traitSrc = getRouteTrait(href);
+      await overlayRef.current.coverSingleLine(
+        label ?? getRouteLabel(href),
+        trait ?? (traitSrc ? { src: traitSrc } : undefined),
+      );
       router.push(href);
 
       clearFallback();

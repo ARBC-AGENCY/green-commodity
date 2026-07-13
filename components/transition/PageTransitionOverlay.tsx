@@ -21,7 +21,7 @@ export type TraitConfig = {
 
 export type PageTransitionOverlayHandle = {
   /** Cover with a single centered label (used for ordinary page navigations). */
-  coverSingleLine: (label: string) => Promise<void>;
+  coverSingleLine: (label: string, trait?: TraitConfig) => Promise<void>;
   /** Cover with two stacked lines and an optional trait underline (intro preloader). */
   coverMultiline: (
     lines: [string, string],
@@ -55,6 +55,7 @@ export const PageTransitionOverlay = forwardRef<PageTransitionOverlayHandle>(
     const rootRef = useRef<HTMLDivElement>(null);
     const bgRef = useRef<HTMLDivElement>(null);
     const singleLineRef = useRef<HTMLDivElement>(null);
+    const singleWrapRef = useRef<HTMLDivElement>(null);
     const multiWrapRef = useRef<HTMLDivElement>(null);
     const cachetRef = useRef<HTMLDivElement>(null);
     const traitRef = useRef<TraitHandle>(null);
@@ -77,32 +78,38 @@ export const PageTransitionOverlay = forwardRef<PageTransitionOverlayHandle>(
       { scope: rootRef },
     );
 
-    const coverSingleLine = contextSafe(async (label: string) => {
-      setTrait(null);
-      setMode("single");
-      gsap.set(rootRef.current, { pointerEvents: "auto" });
-      await nextFrame();
+    const coverSingleLine = contextSafe(
+      async (label: string, traitConfig?: TraitConfig) => {
+        setTrait(traitConfig ?? null);
+        setMode("single");
+        gsap.set(rootRef.current, { pointerEvents: "auto" });
+        await nextFrame();
 
-      if (singleLineRef.current) {
-        singleLineRef.current.textContent = label;
-        gsap.set(singleLineRef.current, { opacity: 0, y: 24 });
-      }
+        if (singleLineRef.current) {
+          singleLineRef.current.textContent = label;
+          gsap.set(singleLineRef.current, { opacity: 0, y: 24 });
+        }
 
-      await Promise.all([
-        gsap.to(bgRef.current, {
-          opacity: 1,
-          duration: 0.5,
-          ease: "power2.out",
-        }),
-        gsap.to(singleLineRef.current, {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          delay: 0.15,
-          ease: "power2.out",
-        }),
-      ]);
-    });
+        await Promise.all([
+          gsap.to(bgRef.current, {
+            opacity: 1,
+            duration: 0.5,
+            ease: "power3.out",
+          }),
+          gsap.to(singleLineRef.current, {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            delay: 0.15,
+            ease: "power3.out",
+          }),
+        ]);
+
+        if (traitConfig) {
+          await traitRef.current?.play();
+        }
+      },
+    );
 
     const animateCachetIn = () =>
       new Promise<void>((resolve) => {
@@ -166,7 +173,7 @@ export const PageTransitionOverlay = forwardRef<PageTransitionOverlayHandle>(
 
     const revealAll = contextSafe(async () => {
       const targets = [
-        singleLineRef.current,
+        singleWrapRef.current,
         multiWrapRef.current,
         cachetRef.current,
       ].filter(Boolean);
@@ -223,7 +230,20 @@ export const PageTransitionOverlay = forwardRef<PageTransitionOverlayHandle>(
 
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
           {mode === "single" && (
-            <div ref={singleLineRef} className={line2TextClass} />
+            <div ref={singleWrapRef} className="relative inline-block">
+              <div ref={singleLineRef} className={line2TextClass} />
+              {trait && (
+                <Trait
+                  ref={traitRef}
+                  src={trait.src}
+                  className={
+                    trait.className ??
+                    "absolute left-1/2 top-full -mt-2 sm:-mt-2 md:-mt-4 lg:-mt-6 w-full max-w-none -translate-x-1/2"
+                  }
+                  style={trait.style}
+                />
+              )}
+            </div>
           )}
 
           {mode === "multiline" && (
@@ -268,7 +288,7 @@ export const PageTransitionOverlay = forwardRef<PageTransitionOverlayHandle>(
                     from={{ opacity: 0, y: 40 }}
                     to={{ opacity: 1, y: 0 }}
                     duration={1.3}
-                    delay={30}
+                    delay={50}
                     ease="power3.out"
                     threshold={0}
                     rootMargin="0px"

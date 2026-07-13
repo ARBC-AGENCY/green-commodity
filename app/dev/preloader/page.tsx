@@ -53,6 +53,17 @@ export default function PreloaderPreviewPage() {
         <button
           type="button"
           className={buttonClass}
+          onClick={() =>
+            overlayRef.current?.coverSingleLine("Accueil", {
+              src: "TRAIT 2.svg",
+            })
+          }
+        >
+          3b. Cover single line + trait
+        </button>
+        <button
+          type="button"
+          className={buttonClass}
           onClick={() => overlayRef.current?.revealAll()}
         >
           4. Reveal all
