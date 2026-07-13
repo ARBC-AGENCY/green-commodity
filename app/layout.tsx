@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { lovelace } from "./fonts";
+import { TransitionProvider } from "@/components/transition/TransitionProvider";
+import { IntroGate } from "@/components/intro/IntroGate";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,7 +30,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${lovelace.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <TransitionProvider>
+          <IntroGate>{children}</IntroGate>
+        </TransitionProvider>
+      </body>
     </html>
   );
 }
