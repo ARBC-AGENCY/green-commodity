@@ -9,7 +9,7 @@ export type TraitHandle = {
 };
 
 type TraitProps = {
-  /** Filename inside public/SVG, e.g. "TRAIT ACCUEIL.svg" */
+  /** Filename inside public/svg, e.g. "TRAIT ACCUEIL.svg" */
   src: string;
   className?: string;
   style?: React.CSSProperties;
@@ -54,7 +54,7 @@ export const Trait = forwardRef<TraitHandle, TraitProps>(function Trait(
     // eslint-disable-next-line @next/next/no-img-element
     <img
       ref={imgRef}
-      src={`/SVG/${src}`}
+      src={`/svg/${src}`}
       alt=""
       aria-hidden="true"
       draggable={false}

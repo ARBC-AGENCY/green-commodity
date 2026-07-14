@@ -10,8 +10,20 @@ const en: Dictionary = {
     disableSound: "Disable sound",
   },
   home: {
-    heading: "Green Commodity",
-    body: "This page is a placeholder while the rest of the site is being built.",
+    hero: {
+      h1Line1: "An orchestra of",
+      h1Line2: "exceptional beans",
+      h2Line1: "Logistics without",
+      h2Line2: "a false note",
+      description:
+        "Green Commodities works hand in hand with Cameroonian producers to offer master chocolatiers exceptional cocoa. We secure your volumes by guaranteeing a high-quality supply, compliant with European anti-deforestation regulations and traceable from our production basins to your delivery ports.",
+      slideHint: "Slide",
+      social: {
+        linkedin: "LinkedIn",
+        facebook: "Facebook",
+        tiktok: "TikTok",
+      },
+    },
   },
   languageSwitcher: {
     label: "Language",

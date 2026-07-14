@@ -8,8 +8,19 @@ export type Dictionary = {
     disableSound: string;
   };
   home: {
-    heading: string;
-    body: string;
+    hero: {
+      h1Line1: string;
+      h1Line2: string;
+      h2Line1: string;
+      h2Line2: string;
+      description: string;
+      slideHint: string;
+      social: {
+        linkedin: string;
+        facebook: string;
+        tiktok: string;
+      };
+    };
   };
   languageSwitcher: {
     label: string;

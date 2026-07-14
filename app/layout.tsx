@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { lovelace, apparel } from "./fonts";
+import { lovelace, apparel, apparelDisplay } from "./fonts";
 import { TransitionProvider } from "@/components/transition/TransitionProvider";
 import { IntroGate } from "@/components/intro/IntroGate";
 import { LocaleProvider } from "@/components/i18n/LocaleProvider";
+import { LenisProvider } from "@/components/scroll/LenisProvider";
 import { Header } from "@/components/layout/Header";
 import { SiteBackground } from "@/components/layout/SiteBackground";
 import { getInitialLocale } from "@/lib/i18n/get-locale";
@@ -34,20 +35,22 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${lovelace.variable} ${apparel.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${lovelace.variable} ${apparel.variable} ${apparelDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <SiteBackground />
-        <LocaleProvider initialLocale={locale}>
-          <TransitionProvider>
-            <Header />
-            <IntroGate>
-              <main className="flex flex-1 flex-col pt-16 md:pt-24">
-                {children}
-              </main>
-            </IntroGate>
-          </TransitionProvider>
-        </LocaleProvider>
+        <LenisProvider>
+          <LocaleProvider initialLocale={locale}>
+            <TransitionProvider>
+              <Header />
+              <IntroGate>
+                <main className="flex flex-1 flex-col">
+                  {children}
+                </main>
+              </IntroGate>
+            </TransitionProvider>
+          </LocaleProvider>
+        </LenisProvider>
       </body>
     </html>
   );

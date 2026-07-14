@@ -10,8 +10,20 @@ const fr: Dictionary = {
     disableSound: "Couper le son",
   },
   home: {
-    heading: "Green Commodity",
-    body: "Cette page est provisoire pendant que le reste du site est en construction.",
+    hero: {
+      h1Line1: "Un orchestre de",
+      h1Line2: "fèves d'exception",
+      h2Line1: "Une logistique",
+      h2Line2: "sans fausse note",
+      description:
+        "Green Commodities travaille main dans la main avec les producteurs Camerounais pour offrir aux maîtres chocolatiers un cacao d'exception. Nous sécurisons vos volumes en garantissant un approvisionnement de haute qualité, conforme aux normes européennes anti-déforestation et traçable depuis nos bassins de production, jusqu'à vos ports de livraison.",
+      slideHint: "Slide",
+      social: {
+        linkedin: "LinkedIn",
+        facebook: "Facebook",
+        tiktok: "TikTok",
+      },
+    },
   },
   languageSwitcher: {
     label: "Langue",

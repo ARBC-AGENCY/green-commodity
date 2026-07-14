@@ -88,7 +88,7 @@ export function Header() {
             alt="Green Commodity"
             width={676}
             height={145}
-            className="h-9 w-auto"
+            className="h-10 w-auto"
             priority
           />
         </TransitionLink>
