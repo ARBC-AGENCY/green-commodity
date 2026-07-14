@@ -32,6 +32,8 @@
   --color-green: #0b573e;
   --color-heading: #2d2d2d; /* noir grand texte */
   --color-body: #5d5d5d; /* noir petit texte paragraphe */
+
+  --breakpoint-panel: 1440px;
 }
 
 @theme inline {
