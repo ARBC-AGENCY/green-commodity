@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { lovelace } from "./fonts";
+import { lovelace, apparel } from "./fonts";
 import { TransitionProvider } from "@/components/transition/TransitionProvider";
 import { IntroGate } from "@/components/intro/IntroGate";
 import { LocaleProvider } from "@/components/i18n/LocaleProvider";
-import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
+import { Header } from "@/components/layout/Header";
+import { SiteBackground } from "@/components/layout/SiteBackground";
 import { getInitialLocale } from "@/lib/i18n/get-locale";
 import "./globals.css";
 
@@ -33,16 +34,19 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${lovelace.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${lovelace.variable} ${apparel.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <SiteBackground />
         <LocaleProvider initialLocale={locale}>
           <TransitionProvider>
-            <IntroGate>{children}</IntroGate>
+            <Header />
+            <IntroGate>
+              <main className="flex flex-1 flex-col pt-16 md:pt-24">
+                {children}
+              </main>
+            </IntroGate>
           </TransitionProvider>
-          <div className="fixed top-4 right-4 z-40">
-            <LanguageSwitcher />
-          </div>
         </LocaleProvider>
       </body>
     </html>

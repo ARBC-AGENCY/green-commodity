@@ -26,3 +26,25 @@ export const lovelace = localFont({
   variable: "--font-lovelace",
   display: "swap",
 });
+
+export const apparel = localFont({
+  src: [
+    {
+      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-regularit.otf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-apparel",
+  display: "swap",
+});

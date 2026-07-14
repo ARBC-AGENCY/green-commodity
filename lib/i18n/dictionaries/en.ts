@@ -16,6 +16,17 @@ const en: Dictionary = {
   languageSwitcher: {
     label: "Language",
   },
+  nav: {
+    ourStory: "Our Story",
+    theChain: "The Chain",
+    ourCocoas: "Our Cocoas",
+    impact: "Impact",
+    gallery: "Gallery",
+    blog: "Blog & News",
+    order: "Order",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+  },
 };
 
 export default en;

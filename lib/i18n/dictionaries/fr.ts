@@ -16,6 +16,17 @@ const fr: Dictionary = {
   languageSwitcher: {
     label: "Langue",
   },
+  nav: {
+    ourStory: "Notre Histoire",
+    theChain: "La Chaîne",
+    ourCocoas: "Nos Cacaos",
+    impact: "Impact",
+    gallery: "Gallery",
+    blog: "Blog et Actualités",
+    order: "Commander",
+    openMenu: "Ouvrir le menu",
+    closeMenu: "Fermer le menu",
+  },
 };
 
 export default fr;

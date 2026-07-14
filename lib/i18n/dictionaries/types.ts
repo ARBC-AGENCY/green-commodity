@@ -14,4 +14,15 @@ export type Dictionary = {
   languageSwitcher: {
     label: string;
   };
+  nav: {
+    ourStory: string;
+    theChain: string;
+    ourCocoas: string;
+    impact: string;
+    gallery: string;
+    blog: string;
+    order: string;
+    openMenu: string;
+    closeMenu: string;
+  };
 };
