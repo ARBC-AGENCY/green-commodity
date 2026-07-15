@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${lovelace.variable} ${apparel.variable} ${apparelDisplay.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${lovelace.variable} ${apparel.variable} ${apparelDisplay.variable} min-h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <SiteBackground />

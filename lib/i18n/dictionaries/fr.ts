@@ -24,6 +24,17 @@ const fr: Dictionary = {
         tiktok: "TikTok",
       },
     },
+    stats: {
+      headingLine1: "Nos",
+      headingLine2: "chiffres clés",
+      items: [
+        "Grands Bassins de production : Centre, Sud et Sud-Ouest Camerounais.",
+        "producteurs et leurs communautés impactés au quotidien.",
+        "Parcelles de production géolocalisées et conformes aux exigences de l'EUDR.",
+        "Tonnes de cacao expédiées à ce jour vers l'UE.",
+        "Taux d'humidité garanti, stabilisation contrôlée en magasins ventilés.",
+      ],
+    },
   },
   languageSwitcher: {
     label: "Langue",

@@ -37,6 +37,23 @@
   --breakpoint-homesection: 860px;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+html.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+html.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

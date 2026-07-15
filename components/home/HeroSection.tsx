@@ -2,16 +2,13 @@
 
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { Volume2, VolumeX } from "lucide-react";
 import { useTranslations } from "@/components/i18n/LocaleProvider";
 import { Trait, type TraitHandle } from "@/components/transition/Trait";
 import { HeroVideo, type HeroVideoHandle } from "./HeroVideo";
 import { SocialLinks } from "./SocialLinks";
 import { useHorizontalScroll } from "./HorizontalScrollSections";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export function HeroSection() {
   const t = useTranslations();

@@ -21,6 +21,11 @@ export type Dictionary = {
         tiktok: string;
       };
     };
+    stats: {
+      headingLine1: string;
+      headingLine2: string;
+      items: [string, string, string, string, string];
+    };
   };
   languageSwitcher: {
     label: string;

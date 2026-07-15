@@ -50,7 +50,7 @@ export const HeroVideo = forwardRef<HeroVideoHandle, HeroVideoProps>(
 
     return (
       <div
-        className={`relative aspect-video homesection:aspect-auto md:min-h-0 md:flex-1 ${className ?? ""}`}
+        className={`relative aspect-video homesection:aspect-auto homesection:min-h-0 homesection:flex-1 ${className ?? ""}`}
       >
         <Script
           src="https://embed.cloudflarestream.com/embed/sdk.latest.js"
@@ -69,7 +69,7 @@ export const HeroVideo = forwardRef<HeroVideoHandle, HeroVideoProps>(
           />
         </div>
 
-        <div className="absolute max-md:hidden -bottom-10 left-2 w-38 drop-shadow-xl homesection:bottom-15 homesection:-left-5 homesection:w-36 xl:-bottom-3 xl:w-55">
+        <div className="absolute max-homesection:hidden -bottom-10 left-2 w-38 drop-shadow-xl homesection:bottom-15 homesection:-left-5 homesection:w-36 xl:-bottom-3 xl:w-55">
           <Image
             src="/images/CACHET 2.webp"
             alt=""

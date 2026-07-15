@@ -24,6 +24,17 @@ const en: Dictionary = {
         tiktok: "TikTok",
       },
     },
+    stats: {
+      headingLine1: "Our",
+      headingLine2: "key figures",
+      items: [
+        "Major production basins: Centre, South and South-West Cameroon.",
+        "producers and their communities positively impacted every day.",
+        "Geolocated production plots compliant with EUDR requirements.",
+        "Tonnes of cocoa shipped to the EU to date.",
+        "Guaranteed moisture rate, controlled stabilization in ventilated warehouses.",
+      ],
+    },
   },
   languageSwitcher: {
     label: "Language",

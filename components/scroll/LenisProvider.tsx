@@ -2,10 +2,7 @@
 
 import { useEffect, type ReactNode } from "react";
 import Lenis from "lenis";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 /** Drives smooth scrolling for the whole site and keeps ScrollTrigger in sync. */
 export function LenisProvider({ children }: { children: ReactNode }) {
@@ -17,7 +14,13 @@ export function LenisProvider({ children }: { children: ReactNode }) {
     gsap.ticker.add(syncTicker);
     gsap.ticker.lagSmoothing(0);
 
+    // Keep Lenis's cached scroll range in sync whenever ScrollTrigger
+    // recalculates (e.g. pin-spacers resizing after late-loading content).
+    const resizeLenis = () => lenis.resize();
+    ScrollTrigger.addEventListener("refresh", resizeLenis);
+
     return () => {
+      ScrollTrigger.removeEventListener("refresh", resizeLenis);
       gsap.ticker.remove(syncTicker);
       lenis.destroy();
     };
