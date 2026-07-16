@@ -60,6 +60,13 @@ const en: Dictionary = {
           "to rebuild the future of our communities. By combining modern agroforestry with a fair, stable pricing model, we're bringing young people back to the fields. Today, we help our producers access banking and savings to secure their daily lives. And because the future is written in classrooms, we fund school supplies and support their children's education.",
       },
     },
+    purchase: {
+      headingWord: "Buying",
+      headingRest: "our cacao,",
+      headingLine2: "means reviving",
+      headingLine3: "the song of cacao",
+      headingLine4: "and restoring dignity to our land.",
+    },
   },
   languageSwitcher: {
     label: "Language",

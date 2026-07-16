@@ -60,6 +60,13 @@ const fr: Dictionary = {
           "pour rebâtir l'avenir de nos communautés. En alliant l'agroforesterie moderne à un modèle de prix juste et stable, nous ramenons la jeunesse dans les champs. Aujourd'hui, nous bancarisons nos producteurs et les accompagnons vers l'épargne pour sécuriser leur quotidien. Et parce que l'avenir s'écrit sur les bancs de l'école, nous finançons les fournitures et soutenons la scolarisation de leurs enfants.",
       },
     },
+    purchase: {
+      headingWord: "Acheter",
+      headingRest: "notre cacao,",
+      headingLine2: "C'est faire renaître",
+      headingLine3: "le chant du cacao",
+      headingLine4: "et redonner sa dignité à notre terre.",
+    },
   },
   languageSwitcher: {
     label: "Langue",

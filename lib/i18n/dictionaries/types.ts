@@ -48,6 +48,13 @@ export type Dictionary = {
         paragraph: string;
       };
     };
+    purchase: {
+      headingWord: string;
+      headingRest: string;
+      headingLine2: string;
+      headingLine3: string;
+      headingLine4: string;
+    };
   };
   languageSwitcher: {
     label: string;

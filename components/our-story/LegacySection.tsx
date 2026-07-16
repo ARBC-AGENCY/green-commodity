@@ -64,7 +64,7 @@ export function LegacySection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex h-dvh w-full flex-col gap-10 px-6 py-12 homesection:flex-row xl:gap-24 homesection:overflow-hidden homesection:px-16 homesection:py-16 homesection:items-center xl:px-24"
+      className="relative flex min-h-screen homesection:h-dvh w-full flex-col gap-10 px-6 py-12 homesection:flex-row xl:gap-24 homesection:overflow-hidden homesection:px-16 homesection:py-16 homesection:items-center xl:px-24"
     >
       <div
         ref={leftRef}
