@@ -33,6 +33,21 @@ export type Dictionary = {
       quoteLine2: string;
       paragraph: string;
     };
+    legacy: {
+      h1Line1: string;
+      h1Line2: string;
+      h3Prefix: string;
+      h3Emphasis: string;
+      paragraph: string;
+      callout: string;
+      founded: {
+        leadIn: string;
+        brand1: string;
+        and: string;
+        brand2: string;
+        paragraph: string;
+      };
+    };
   };
   languageSwitcher: {
     label: string;

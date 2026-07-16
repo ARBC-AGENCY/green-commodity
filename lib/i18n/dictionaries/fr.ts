@@ -43,6 +43,23 @@ const fr: Dictionary = {
       paragraph:
         "Quand j'étais enfant à Obala, ma grand-mère me répétait une phrase les années de belles récoltes : \"Cette année le cacao a chanté.\" C'était notre façon de dire que la terre avait été généreuse, que les études des enfants étaient payées et que nos familles allaient vivre dignement. C'est cet amour partagé pour la terre qui a convaincu ma grand-mère de me confier mes premières parcelles.",
     },
+    legacy: {
+      h1Line1: "Puis,",
+      h1Line2: "le silence",
+      h3Prefix: "est",
+      h3Emphasis: "tombé",
+      paragraph:
+        "Au décès de ma grand-mère et de nombreux autres patriarches, la volatilité des cours mondiaux et l'explosion des coûts de production ont rendu cet héritage trop lourd pour bon nombre d'entre nous. J'ai vu les jeunes fuir vers les villes et la brousse engloutir les plantations de notre enfance. Le chant du cacao s'est éteint.",
+      callout: "J'ai refusé de rester spectatrice de cette agonie.",
+      founded: {
+        leadIn: "J'ai fondé",
+        brand1: "GREEN FARMERS",
+        and: "et",
+        brand2: "GREEN COMMODITIES",
+        paragraph:
+          "pour rebâtir l'avenir de nos communautés. En alliant l'agroforesterie moderne à un modèle de prix juste et stable, nous ramenons la jeunesse dans les champs. Aujourd'hui, nous bancarisons nos producteurs et les accompagnons vers l'épargne pour sécuriser leur quotidien. Et parce que l'avenir s'écrit sur les bancs de l'école, nous finançons les fournitures et soutenons la scolarisation de leurs enfants.",
+      },
+    },
   },
   languageSwitcher: {
     label: "Langue",

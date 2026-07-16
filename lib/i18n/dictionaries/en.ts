@@ -43,6 +43,23 @@ const en: Dictionary = {
       paragraph:
         "When I was a child in Obala, my grandmother used to repeat a phrase in the years of good harvests: \"This year, the cacao has sung.\" It was our way of saying that the land had been generous, that the children's school fees were paid, and that our families would live with dignity. It was this shared love for the land that convinced my grandmother to entrust me with my first plots.",
     },
+    legacy: {
+      h1Line1: "Then,",
+      h1Line2: "the silence",
+      h3Prefix: "",
+      h3Emphasis: "fell",
+      paragraph:
+        "When my grandmother and many other elders passed away, the volatility of global prices and soaring production costs made this legacy too heavy for many of us to bear. I watched young people flee to the cities and the bush swallow the plantations of our childhood. The song of the cacao fell silent.",
+      callout: "I refused to stand by and watch this slow death.",
+      founded: {
+        leadIn: "I founded",
+        brand1: "GREEN FARMERS",
+        and: "and",
+        brand2: "GREEN COMMODITIES",
+        paragraph:
+          "to rebuild the future of our communities. By combining modern agroforestry with a fair, stable pricing model, we're bringing young people back to the fields. Today, we help our producers access banking and savings to secure their daily lives. And because the future is written in classrooms, we fund school supplies and support their children's education.",
+      },
+    },
   },
   languageSwitcher: {
     label: "Language",

@@ -6,10 +6,12 @@ import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { useTranslations } from "@/components/i18n/LocaleProvider";
 import { Trait, type TraitHandle } from "@/components/transition/Trait";
+import { useHorizontalScroll } from "@/components/home/HorizontalScrollSections";
 
 export function StoryIntroSection() {
   const t = useTranslations();
   const intro = t.ourStory.intro;
+  const { containerAnimation } = useHorizontalScroll();
 
   const sectionRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
@@ -17,26 +19,39 @@ export function StoryIntroSection() {
 
   useGSAP(
     () => {
-      gsap.set(textRef.current, { opacity: 0, y: 32 });
+      const isHorizontal = Boolean(containerAnimation);
+
+      gsap.set(
+        textRef.current,
+        isHorizontal ? { opacity: 0, x: 72 } : { opacity: 0, y: 32 },
+      );
+
+      const playReveal = () => {
+        gsap
+          .timeline()
+          .to(textRef.current, {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            duration: 1.3,
+            ease: "power4.out",
+          })
+          .add(() => traitRef.current?.play(), "-=0.5");
+      };
+
+      if (containerAnimation) {
+        playReveal();
+        return;
+      }
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top 80%",
         once: true,
-        onEnter: () => {
-          gsap
-            .timeline()
-            .to(textRef.current, {
-              opacity: 1,
-              y: 0,
-              duration: 1.3,
-              ease: "power4.out",
-            })
-            .add(() => traitRef.current?.play(), "-=0.5");
-        },
+        onEnter: playReveal,
       });
     },
-    { scope: sectionRef },
+    { scope: sectionRef, dependencies: [containerAnimation] },
   );
 
   return (
@@ -75,7 +90,7 @@ export function StoryIntroSection() {
                 className="absolute right-0 top-full -mt-3 homesection:w-52 max-w-none"
               />
             </div>
-            <p className="max-w-md font-apparel max-homesection:text-center text-sm leading-snug text-body mt-10">
+            <p className="max-w-md font-apparel text-xs max-homesection:text-center xl:text-sm leading-normal text-body mt-10">
               {intro.paragraph}
             </p>
           </div>
