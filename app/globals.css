@@ -50,6 +50,17 @@ html.lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
 
+/* Scrolling stays fully functional (native window scroll, driven by Lenis) —
+   this only hides the browser-drawn scrollbar track/thumb. */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* legacy Edge/IE */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chromium/Safari */
+}
+
 html.lenis.lenis-stopped {
   overflow: hidden;
 }

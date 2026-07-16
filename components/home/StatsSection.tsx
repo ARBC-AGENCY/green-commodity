@@ -105,7 +105,7 @@ export function StatsSection() {
       }}
       className="flex items-center gap-4"
     >
-      <div className="relative h-24 w-24 shrink-0 overflow-hidden xl:h-58 xl:w-58">
+      <div className="relative h-24 w-24 shrink-0 overflow-hidden homesection:h-28 homesection:w-28 lg:w-38 lg:h-38 xl:w-48 xl:h-48 2xl:h-58 2xl:w-58">
         <Image src={item.image} alt="" fill className="object-cover" />
       </div>
       <div className="flex flex-col gap-1">
@@ -131,7 +131,7 @@ export function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex w-full h-dvh shrink-0 flex-col justify-center  gap-10 px-6 py-12 homesection:w-screen homesection:overflow-hidden homesection:px-16 lg:gap-14 lg:px-24"
+      className="relative flex w-full h-dvh shrink-0 flex-col justify-center  gap-10 px-6 py-12 homesection:w-screen homesection:overflow-hidden homesection:px-16 lg:gap-5 lg:px-24"
     >
       <div ref={headingRef} className="flex flex-col gap-1">
         <h2 className="font-lovelace text-2xl font-bold leading-tight text-heading xl:text-3xl">
@@ -144,17 +144,17 @@ export function StatsSection() {
           <Trait
             ref={headingTraitRef}
             src="TRAIT 2.svg"
-            className="absolute left-0 top-full -mt-2 homesection:-mt-6 w-2/3 max-w-none"
+            className="absolute left-0 top-full -mt-6 homesection:-mt-6 w-2/3 max-w-none"
           />
         </div>
       </div>
-      <div className="flex flex-col gap-10 homesection:w-[85%] homesection:self-center-safe homesection:gap-y-14">
-        <div className="flex flex-col gap-10 homesection:flex-row homesection:justify-center homesection:gap-x-4">
+      <div className="flex flex-col gap-10 homesection:w-full lg:w-[95%] 2xl:w-[95%] homesection:self-center-safe xl:gap-y-14">
+        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 xl:flex xl:flex-row w-full xl:w-[75%] xl:self-center-safe  gap-x-12 homesection:flex-row xl:justify-center">
           {STAT_ITEMS.slice(0, 2).map((item, i) =>
             renderStatCard(item, i, stats.items[i]),
           )}
         </div>
-        <div className="grid grid-cols-1 gap-x-12 gap-y-10 homesection:grid-cols-3 homesection:gap-y-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10 xl:grid-cols-3 homesection:gap-y-14">
           {STAT_ITEMS.slice(2).map((item, i) =>
             renderStatCard(item, i + 2, stats.items[i + 2]),
           )}
