@@ -36,6 +36,14 @@ const en: Dictionary = {
       ],
     },
   },
+  ourStory: {
+    intro: {
+      quoteLine1: "The song",
+      quoteLine2: "of cacao",
+      paragraph:
+        "When I was a child in Obala, my grandmother used to repeat a phrase in the years of good harvests: \"This year, the cacao has sung.\" It was our way of saying that the land had been generous, that the children's school fees were paid, and that our families would live with dignity. It was this shared love for the land that convinced my grandmother to entrust me with my first plots.",
+    },
+  },
   languageSwitcher: {
     label: "Language",
   },

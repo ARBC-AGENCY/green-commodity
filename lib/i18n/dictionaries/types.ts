@@ -27,6 +27,13 @@ export type Dictionary = {
       items: [string, string, string, string, string];
     };
   };
+  ourStory: {
+    intro: {
+      quoteLine1: string;
+      quoteLine2: string;
+      paragraph: string;
+    };
+  };
   languageSwitcher: {
     label: string;
   };

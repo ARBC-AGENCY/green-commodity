@@ -36,6 +36,14 @@ const fr: Dictionary = {
       ],
     },
   },
+  ourStory: {
+    intro: {
+      quoteLine1: "Le chant",
+      quoteLine2: "du cacao",
+      paragraph:
+        "Quand j'étais enfant à Obala, ma grand-mère me répétait une phrase les années de belles récoltes : \"Cette année le cacao a chanté.\" C'était notre façon de dire que la terre avait été généreuse, que les études des enfants étaient payées et que nos familles allaient vivre dignement. C'est cet amour partagé pour la terre qui a convaincu ma grand-mère de me confier mes premières parcelles.",
+    },
+  },
   languageSwitcher: {
     label: "Langue",
   },
