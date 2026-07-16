@@ -48,6 +48,18 @@ export type Dictionary = {
         paragraph: string;
       };
     };
+    mission: {
+      h1Line1: string;
+      h1Line2: string;
+      h3Emphasis: string;
+      paragraph: string;
+      missionTitle: string;
+      missionEmphasis: string;
+      missionParagraph: string;
+      engagementTitle: string;
+      engagementEmphasis: string;
+      engagementParagraph: string;
+    };
     purchase: {
       headingWord: string;
       headingRest: string;

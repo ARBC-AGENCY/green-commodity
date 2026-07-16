@@ -60,6 +60,21 @@ const en: Dictionary = {
           "to rebuild the future of our communities. By combining modern agroforestry with a fair, stable pricing model, we're bringing young people back to the fields. Today, we help our producers access banking and savings to secure their daily lives. And because the future is written in classrooms, we fund school supplies and support their children's education.",
       },
     },
+    mission: {
+      h1Line1: "2 entities,",
+      h1Line2: "one shared",
+      h3Emphasis: "score:",
+      paragraph:
+        "The alliance of Green Farmer and Green Commodities, orchestrating sourcing excellence by combining the power of volume with the rigor of quality.",
+      missionTitle: "Our",
+      missionEmphasis: "mission:",
+      missionParagraph:
+        "To act as your trusted third-party partner on the ground in Cameroon, directly connecting our producer networks in the Centre, South, and South-West regions to the demands of local, regional, and international industry.",
+      engagementTitle: "Our",
+      engagementEmphasis: "commitment:",
+      engagementParagraph:
+        "To unite local producers through a transparent and equitable model, via a social approach guaranteeing our clients privileged access to cocoa of controlled origin, traceable and ethical.",
+    },
     purchase: {
       headingWord: "Buying",
       headingRest: "our cacao,",

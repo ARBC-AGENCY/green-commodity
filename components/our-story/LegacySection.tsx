@@ -71,13 +71,13 @@ export function LegacySection() {
         className="flex flex-col max-[550px]:items-center min-[550px]:grid min-[550px]:grid-cols-2 homesection:flex homesection:flex-col justify-center gap-6 homesection:w-[38%] homesection:max-w-md"
       >
         <div className="flex flex-col  max-homesection:justify-center max-homesection:items-center gap-1">
-          <h2 className="font-lovelace max-[550px]:text-center text-lg homesection:text-2xl font-bold leading-none text-heading  xl:text-5xl">
+          <h2 className="font-lovelace max-[550px]:text-center text-2xl homesection:text-2xl font-bold leading-none text-heading  xl:text-5xl">
             {legacy.h1Line1}
             <br />
             {legacy.h1Line2}
           </h2>
           <div className="relative inline-block w-fit ">
-            <span className="font-lovelace text-lg homesection:text-2xl leading-none text-heading xl:text-5xl">
+            <span className="font-lovelace text-2xl homesection:text-2xl leading-none text-heading xl:text-5xl">
               {legacy.h3Prefix && `${legacy.h3Prefix} `}
               <span className="italic outline-text">{legacy.h3Emphasis}</span>
             </span>

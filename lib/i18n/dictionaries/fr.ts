@@ -60,6 +60,21 @@ const fr: Dictionary = {
           "pour rebâtir l'avenir de nos communautés. En alliant l'agroforesterie moderne à un modèle de prix juste et stable, nous ramenons la jeunesse dans les champs. Aujourd'hui, nous bancarisons nos producteurs et les accompagnons vers l'épargne pour sécuriser leur quotidien. Et parce que l'avenir s'écrit sur les bancs de l'école, nous finançons les fournitures et soutenons la scolarisation de leurs enfants.",
       },
     },
+    mission: {
+      h1Line1: "2 entités,",
+      h1Line2: "une seule",
+      h3Emphasis: "partition :",
+      paragraph:
+        "L'alliance de Green Farmer et Green Commodities pour orchestrer un approvisionnement d'excellence, alliant la puissance des volumes à la rigueur de la qualité.",
+      missionTitle: "Notre",
+      missionEmphasis: "mission :",
+      missionParagraph:
+        "Agir comme votre partenaire tiers de confiance sur le terrain camerounais en connectant directement nos réseaux de producteurs des régions du centre, sud et sud-ouest du Cameroun aux exigences de l'industrie locale, régionale et internationale.",
+      engagementTitle: "Notre",
+      engagementEmphasis: "engagement :",
+      engagementParagraph:
+        "Fédérer les producteurs locaux à travers un modèle transparent et équitable, via une démarche sociale, garantissant à nos clients un accès privilégié à un cacao d'origine contrôlé, traçable et éthique.",
+    },
     purchase: {
       headingWord: "Acheter",
       headingRest: "notre cacao,",
