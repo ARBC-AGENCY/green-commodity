@@ -107,6 +107,13 @@ const en: Dictionary = {
       paragraph2:
         "Finally, it manages transit and legal compliance under official certifications (ONCC, ANOR, Rainforest Alliance), as well as tangible social impact — educational support, scholarships, school supplies and youth mentoring.",
     },
+    secureProcess: {
+      h1Line1: "A Secure",
+      h1Line2: "Sourcing",
+      h1Emphasis: "process",
+      paragraph:
+        "It all starts with jointly defining your technical specifications. We plan the volumes required for the campaign together and act on your specific requirements: targeted regional origins (Centre, South or South-West) and the aromatic profiles you're looking for.",
+    },
   },
   languageSwitcher: {
     label: "Language",

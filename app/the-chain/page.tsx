@@ -2,6 +2,7 @@ import { HorizontalScrollSections } from "@/components/home/HorizontalScrollSect
 import { ChainHeroSection } from "@/components/the-chain/ChainHeroSection";
 import { GreenFarmersSection } from "@/components/the-chain/GreenFarmersSection";
 import { GreenCommoditiesSection } from "@/components/the-chain/GreenCommoditiesSection";
+import { SecureProcessSection } from "@/components/the-chain/SecureProcessSection";
 
 export default function TheChainPage() {
   return (
@@ -9,6 +10,7 @@ export default function TheChainPage() {
       <ChainHeroSection />
       <GreenFarmersSection />
       <GreenCommoditiesSection />
+      <SecureProcessSection />
     </HorizontalScrollSections>
   );
 }

@@ -87,6 +87,12 @@ export type Dictionary = {
       paragraph1: string;
       paragraph2: string;
     };
+    secureProcess: {
+      h1Line1: string;
+      h1Line2: string;
+      h1Emphasis: string;
+      paragraph: string;
+    };
   };
   languageSwitcher: {
     label: string;

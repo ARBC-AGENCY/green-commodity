@@ -107,6 +107,13 @@ const fr: Dictionary = {
       paragraph2:
         "Enfin, elle gère le transit, la conformité légale sous agréments officiels (ONCC, ANOR, Rainforest Alliance), et l'impact social concret (soutien éducatif, bourses, fournitures scolaires et mentoring des jeunes).",
     },
+    secureProcess: {
+      h1Line1: "Le Processus",
+      h1Line2: "d'Approvisionnement",
+      h1Emphasis: "sécurisé",
+      paragraph:
+        "Tout commence par une définition conjointe de votre cahier des charges technique. Nous planifions ensemble les volumes requis pour la campagne et actons vos exigences spécifiques : origines régionales ciblées (Centre, Sud ou Sud-Ouest) et profils aromatiques recherchés.",
+    },
   },
   languageSwitcher: {
     label: "Langue",
