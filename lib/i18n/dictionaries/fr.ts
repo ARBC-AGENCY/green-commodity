@@ -83,6 +83,16 @@ const fr: Dictionary = {
       headingLine4: "et redonner sa dignité à notre terre.",
     },
   },
+  theChain: {
+    hero: {
+      h1Line1: "Un écosystème",
+      h1Emphasis: "intégré",
+      paragraph:
+        "Pour éliminer définitivement les fausses notes logistiques, notre modèle repose sur une synergie parfaite entre deux expertises complémentaires, agissant de bout en bout sur la chaîne de valeur.",
+      slideHint: "Slide",
+      videoLabel: "vidéo",
+    },
+  },
   languageSwitcher: {
     label: "Langue",
   },

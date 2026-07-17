@@ -83,6 +83,16 @@ const en: Dictionary = {
       headingLine4: "and restoring dignity to our land.",
     },
   },
+  theChain: {
+    hero: {
+      h1Line1: "An integrated",
+      h1Emphasis: "ecosystem",
+      paragraph:
+        "To eliminate logistical false notes for good, our model relies on a seamless synergy between two complementary areas of expertise, acting end-to-end across the value chain.",
+      slideHint: "Slide",
+      videoLabel: "video",
+    },
+  },
   languageSwitcher: {
     label: "Language",
   },

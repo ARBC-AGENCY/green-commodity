@@ -68,6 +68,15 @@ export type Dictionary = {
       headingLine4: string;
     };
   };
+  theChain: {
+    hero: {
+      h1Line1: string;
+      h1Emphasis: string;
+      paragraph: string;
+      slideHint: string;
+      videoLabel: string;
+    };
+  };
   languageSwitcher: {
     label: string;
   };
