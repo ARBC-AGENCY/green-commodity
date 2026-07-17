@@ -1,0 +1,129 @@
+"use client";
+
+import { useRef } from "react";
+import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { useTranslations } from "@/components/i18n/LocaleProvider";
+import { Trait, type TraitHandle } from "@/components/transition/Trait";
+import { useHorizontalScroll } from "@/components/home/HorizontalScrollSections";
+
+export function GreenFarmersSection() {
+  const t = useTranslations();
+  const greenFarmers = t.theChain.greenFarmers;
+  const { containerAnimation } = useHorizontalScroll();
+
+  const sectionRef = useRef<HTMLElement>(null);
+  const leftRef = useRef<HTMLDivElement>(null);
+  const imageRefs = useRef<HTMLDivElement[]>([]);
+  const traitRef = useRef<TraitHandle>(null);
+
+  useGSAP(
+    () => {
+      const targets = [leftRef.current, ...imageRefs.current].filter(
+        Boolean,
+      ) as HTMLElement[];
+      const isHorizontal = Boolean(containerAnimation);
+
+      gsap.set(
+        targets,
+        isHorizontal ? { opacity: 0, x: 72 } : { opacity: 0, y: 32 },
+      );
+
+      const playReveal = () => {
+        gsap
+          .timeline()
+          .to(targets, {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            duration: 1.3,
+            ease: "power4.out",
+            stagger: 0.16,
+          })
+          .add(() => traitRef.current?.play(), "-=0.6");
+      };
+
+      if (containerAnimation) {
+        playReveal();
+        return;
+      }
+
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top 80%",
+        once: true,
+        onEnter: playReveal,
+      });
+    },
+    { scope: sectionRef, dependencies: [containerAnimation] },
+  );
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative flex min-h-screen homesection:h-dvh w-full flex-col gap-10 px-6 py-12 homesection:flex-row xl:gap-24 homesection:overflow-hidden homesection:px-16 homesection:py-16 homesection:items-center xl:px-24"
+    >
+      <div
+        ref={leftRef}
+        className="flex flex-col max-homesection:items-center justify-center gap-6 homesection:w-[42%] homesection:max-w-lg"
+      >
+        <div className="relative inline-block w-fit">
+          <h2 className="font-lovelace text-base font-bold leading-none text-green xl:text-xl">
+            {greenFarmers.eyebrow}
+          </h2>
+          <Trait
+            ref={traitRef}
+            src="TRAIT ECOSYTEME INTEGRE.svg"
+            className="absolute right-0 top-full -mt-1 w-32 max-w-none xl:w-40"
+          />
+        </div>
+
+        <h3 className="font-lovelace max-homesection:text-center text-2xl homesection:text-2xl font-bold leading-tight text-heading xl:text-3xl">
+          {greenFarmers.heading}
+        </h3>
+
+        <div className="flex flex-col gap-4">
+          <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
+            {greenFarmers.paragraph1}
+          </p>
+          <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
+            {greenFarmers.paragraph2}
+          </p>
+        </div>
+      </div>
+
+      <div className="relative flex flex-col max-lg:justify-center gap-4 w-full homesection:block lg:h-[75%] homesection:flex-1">
+        <div
+          ref={(el) => {
+            if (el) imageRefs.current[0] = el;
+          }}
+          className="relative h-56 w-full lg:absolute homesection:inset-y-0 homesection:right-0 lg:h-[70%] lg:w-[72%]"
+        >
+          <Image
+            src="/images/INCRUSTATION MAIN CACAO 2.webp"
+            alt=""
+            fill
+            sizes="(min-width: 860px) 45vw, 90vw"
+            className="object-contain"
+          />
+        </div>
+
+        <div
+          ref={(el) => {
+            if (el) imageRefs.current[1] = el;
+          }}
+          className="relative h-48 w-full self-center lg:absolute homesection:inset-y-0 homesection:left-0 homesection:top-auto homesection:bottom-0 homesection:z-10 lg:h-[55%] lg:w-[55%] drop-shadow-2xl"
+        >
+          <Image
+            src="/images/GREEN FARMERS INCRUSTATION 2.webp"
+            alt=""
+            fill
+            sizes="(min-width: 860px) 32vw, 80vw"
+            className="object-contain"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}

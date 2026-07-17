@@ -90,7 +90,14 @@ const en: Dictionary = {
       paragraph:
         "To eliminate logistical false notes for good, our model relies on a seamless synergy between two complementary areas of expertise, acting end-to-end across the value chain.",
       slideHint: "Slide",
-      videoLabel: "video",
+    },
+    greenFarmers: {
+      eyebrow: "Green Farmers: upstream",
+      heading: "Integrated control of the production and quality cycle",
+      paragraph1:
+        "It deploys soil regeneration and agroforestry practices (an essential criterion for EUDR compliance), while running strict post-harvest management (treatment, sorting, direct collection) to international standards, with no intermediaries.",
+      paragraph2:
+        "This entity ensures end-to-end control of every stage of production. Through the Green Farmers Program, it trains, equips and supplies local growers to bring young people back into active farming.",
     },
   },
   languageSwitcher: {

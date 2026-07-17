@@ -98,7 +98,7 @@ export function ChainHeroSection() {
 
         <p
           ref={descRef}
-          className="max-w-md font-apparel text-sm leading-snug text-body max-homesection:text-center xl:pl-10"
+          className="max-w-md font-apparel text-sm leading-snug text-body max-homesection:text-center xl:pl-20"
         >
           {hero.paragraph}
         </p>

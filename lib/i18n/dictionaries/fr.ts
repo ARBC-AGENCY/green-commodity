@@ -90,7 +90,14 @@ const fr: Dictionary = {
       paragraph:
         "Pour éliminer définitivement les fausses notes logistiques, notre modèle repose sur une synergie parfaite entre deux expertises complémentaires, agissant de bout en bout sur la chaîne de valeur.",
       slideHint: "Slide",
-      videoLabel: "vidéo",
+    },
+    greenFarmers: {
+      eyebrow: "Green farmers : en amont",
+      heading: "Maîtrise intégrée du cycle de production et de qualité",
+      paragraph1:
+        "Elle déploie des pratiques de régénération des sols et d'agroforesterie (critère essentiel pour la conformité européenne EUDR), tout en exécutant une gestion post-récolte stricte (traitement, tri, collecte directe) selon les normes internationales, sans aucun intermédiaire.",
+      paragraph2:
+        "Cette entité assure le contrôle de bout en bout de la totalité des étapes de production. À travers le Green Farmers Program, elle encadre, forme et fournit les matériaux nécessaires aux planteurs locaux pour remobiliser la jeunesse active.",
     },
   },
   languageSwitcher: {

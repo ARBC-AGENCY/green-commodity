@@ -74,7 +74,12 @@ export type Dictionary = {
       h1Emphasis: string;
       paragraph: string;
       slideHint: string;
-      videoLabel: string;
+    };
+    greenFarmers: {
+      eyebrow: string;
+      heading: string;
+      paragraph1: string;
+      paragraph2: string;
     };
   };
   languageSwitcher: {
