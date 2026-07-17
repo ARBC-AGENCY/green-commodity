@@ -99,6 +99,14 @@ const fr: Dictionary = {
       paragraph2:
         "Cette entité assure le contrôle de bout en bout de la totalité des étapes de production. À travers le Green Farmers Program, elle encadre, forme et fournit les matériaux nécessaires aux planteurs locaux pour remobiliser la jeunesse active.",
     },
+    greenCommodities: {
+      eyebrow: "Green Commodities : en aval,",
+      heading: "Négoce, ingénierie financière et distribution internationale",
+      paragraph1:
+        "Cette entité intervient pour pérenniser l'amont grâce au préfinancement des campagnes et à l'exécution d'achats directs et transparents auprès des producteurs partenaires. Elle pilote un réseau de magasins de stockage intermédiaires et ventilés dans tous nos bassins de production, faisant office de stock tampon stratégique pour garantir la continuité des flux.",
+      paragraph2:
+        "Enfin, elle gère le transit, la conformité légale sous agréments officiels (ONCC, ANOR, Rainforest Alliance), et l'impact social concret (soutien éducatif, bourses, fournitures scolaires et mentoring des jeunes).",
+    },
   },
   languageSwitcher: {
     label: "Langue",

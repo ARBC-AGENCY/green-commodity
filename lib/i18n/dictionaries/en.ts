@@ -99,6 +99,14 @@ const en: Dictionary = {
       paragraph2:
         "This entity ensures end-to-end control of every stage of production. Through the Green Farmers Program, it trains, equips and supplies local growers to bring young people back into active farming.",
     },
+    greenCommodities: {
+      eyebrow: "Green Commodities: downstream,",
+      heading: "Trading, financial engineering and international distribution",
+      paragraph1:
+        "This entity works to sustain the upstream side of the chain through pre-financing of harvest campaigns and direct, transparent purchasing from partner producers. It operates a network of intermediary, ventilated storage warehouses across all our production basins, acting as a strategic buffer stock to guarantee continuity of flow.",
+      paragraph2:
+        "Finally, it manages transit and legal compliance under official certifications (ONCC, ANOR, Rainforest Alliance), as well as tangible social impact — educational support, scholarships, school supplies and youth mentoring.",
+    },
   },
   languageSwitcher: {
     label: "Language",

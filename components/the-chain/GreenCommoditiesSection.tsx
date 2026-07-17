@@ -8,9 +8,9 @@ import { useTranslations } from "@/components/i18n/LocaleProvider";
 import { Trait, type TraitHandle } from "@/components/transition/Trait";
 import { useHorizontalScroll } from "@/components/home/HorizontalScrollSections";
 
-export function GreenFarmersSection() {
+export function GreenCommoditiesSection() {
   const t = useTranslations();
-  const greenFarmers = t.theChain.greenFarmers;
+  const greenCommodities = t.theChain.greenCommodities;
   const { containerAnimation } = useHorizontalScroll();
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -70,7 +70,7 @@ export function GreenFarmersSection() {
       >
         <div className="relative inline-block w-fit">
           <h2 className="font-lovelace text-base font-bold leading-none text-green xl:text-xl">
-            {greenFarmers.eyebrow}
+            {greenCommodities.eyebrow}
           </h2>
           <Trait
             ref={traitRef}
@@ -80,32 +80,32 @@ export function GreenFarmersSection() {
         </div>
 
         <h3 className="font-lovelace max-homesection:text-center text-2xl homesection:text-2xl font-bold leading-tight text-heading xl:text-2xl xl:pl-10">
-          {greenFarmers.heading}
+          {greenCommodities.heading}
         </h3>
 
         <div className="flex flex-col gap-4 xl:pl-20">
           <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
-            {greenFarmers.paragraph1}
+            {greenCommodities.paragraph1}
           </p>
           <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
-            {greenFarmers.paragraph2}
+            {greenCommodities.paragraph2}
           </p>
         </div>
       </div>
 
-      <div className="relative flex flex-col max-lg:justify-center gap-4 w-full homesection:block lg:h-[75%] homesection:flex-1">
+      <div className="grid flex-1 grid-cols-1 min-[550px]:grid-cols-2 lg:grid-rows-2 gap-4 w-full lg:h-[75%] homesection:gap-6">
         <div
           ref={(el) => {
             if (el) imageRefs.current[0] = el;
           }}
-          className="relative h-56 w-full lg:absolute homesection:inset-y-0 homesection:right-0 lg:h-[70%] lg:w-[72%]"
+          className="relative h-56 w-full lg:h-full lg:col-start-1 lg:row-start-1"
         >
           <Image
-            src="/images/INCRUSTATION MAIN CACAO 2.webp"
+            src="/images/GREEN COMMODITIES INCRUSTATION.webp"
             alt=""
             fill
-            sizes="(min-width: 860px) 45vw, 90vw"
-            className="object-contain"
+            sizes="(min-width: 860px) 32vw, 90vw"
+            className="object-contain object-bottom"
           />
         </div>
 
@@ -113,14 +113,29 @@ export function GreenFarmersSection() {
           ref={(el) => {
             if (el) imageRefs.current[1] = el;
           }}
-          className="relative h-48 w-full self-center lg:absolute homesection:inset-y-0 homesection:left-0 homesection:top-auto homesection:bottom-0 homesection:z-10 lg:h-[55%] lg:w-[55%] drop-shadow-2xl"
+          className="relative h-56 w-full lg:h-full lg:col-start-1 lg:row-start-2"
         >
           <Image
-            src="/images/GREEN FARMERS INCRUSTATION 2.webp"
+            src="/images/GREEN COMMODITIES INCRUSTATION 1.webp"
             alt=""
             fill
-            sizes="(min-width: 860px) 32vw, 80vw"
-            className="object-contain"
+            sizes="(min-width: 860px) 32vw, 90vw"
+            className="object-contain object-top"
+          />
+        </div>
+
+        <div
+          ref={(el) => {
+            if (el) imageRefs.current[2] = el;
+          }}
+          className="relative max-[550px]:hidden max-[550px]:h-72 w-full lg:h-full min-[550px]:col-start-2 min-[550px]:row-start-1 min-[550px]:row-span-2"
+        >
+          <Image
+            src="/images/INCRUSTATION IMAGE PORTRAIT 4.webp"
+            alt=""
+            fill
+            sizes="(min-width: 860px) 22vw, 90vw"
+            className="object-contain min-[550px]:object-cover"
           />
         </div>
       </div>

@@ -81,6 +81,12 @@ export type Dictionary = {
       paragraph1: string;
       paragraph2: string;
     };
+    greenCommodities: {
+      eyebrow: string;
+      heading: string;
+      paragraph1: string;
+      paragraph2: string;
+    };
   };
   languageSwitcher: {
     label: string;
