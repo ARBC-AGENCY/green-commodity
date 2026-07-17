@@ -114,6 +114,26 @@ const fr: Dictionary = {
       paragraph:
         "Tout commence par une définition conjointe de votre cahier des charges technique. Nous planifions ensemble les volumes requis pour la campagne et actons vos exigences spécifiques : origines régionales ciblées (Centre, Sud ou Sud-Ouest) et profils aromatiques recherchés.",
     },
+    processSteps: [
+      {
+        titleLine1: "Validation de la commande",
+        titleLine2: "& Structuration",
+        description:
+          "Tout commence par une définition conjointe de votre cahier des charges technique. Nous planifions ensemble les volumes requis pour la campagne et actons vos exigences spécifiques : origines régionales ciblées (Centre, Sud ou Sud-Ouest) et profils aromatiques recherchés.",
+      },
+      {
+        titleLine1: "Sourcing sécurisé à",
+        titleLine2: "la source (GREEN FARMERS)",
+        description:
+          "Une fois la commande validée, GREEN FARMERS active son réseau de producteurs partenaires pour un sourcing tracé et sécurisé, directement à la source, garantissant l'origine et la qualité de chaque lot.",
+      },
+      {
+        titleLine1: "Centralisation",
+        titleLine2: "& Stockage tampon",
+        description:
+          "Les volumes collectés sont centralisés dans nos magasins de stockage intermédiaires et ventilés, répartis sur nos bassins de production, faisant office de stock tampon pour garantir la continuité des flux jusqu'à l'expédition.",
+      },
+    ],
   },
   languageSwitcher: {
     label: "Langue",

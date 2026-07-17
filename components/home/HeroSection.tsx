@@ -129,7 +129,7 @@ export function HeroSection() {
         className="absolute inset-x-0 bottom-6 grid grid-cols-3 items-center gap-4 px-6 md:bottom-10 md:px-16 lg:px-24"
       >
         <SocialLinks labels={hero.social} className="justify-self-start" />
-        <span className="max-[450px]:opacity-0 justify-self-center font-apparel text-xs uppercase tracking-[0.25em] text-heading/70">
+        <span className="max-[450px]:opacity-0 justify-self-center font-apparel text-sm uppercase tracking-[0.25em] text-heading/70">
           {hero.slideHint}
         </span>
         <button

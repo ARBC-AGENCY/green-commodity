@@ -84,10 +84,10 @@ export function GreenCommoditiesSection() {
         </h3>
 
         <div className="flex flex-col gap-4 xl:pl-20">
-          <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
+          <p className="max-w-md max-homesection:text-center font-apparel text-sm xl:text-sm leading-snug text-body">
             {greenCommodities.paragraph1}
           </p>
-          <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
+          <p className="max-w-md max-homesection:text-center font-apparel text-sm xl:text-sm leading-snug text-body">
             {greenCommodities.paragraph2}
           </p>
         </div>

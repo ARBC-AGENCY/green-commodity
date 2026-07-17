@@ -114,6 +114,26 @@ const en: Dictionary = {
       paragraph:
         "It all starts with jointly defining your technical specifications. We plan the volumes required for the campaign together and act on your specific requirements: targeted regional origins (Centre, South or South-West) and the aromatic profiles you're looking for.",
     },
+    processSteps: [
+      {
+        titleLine1: "Order Validation",
+        titleLine2: "& Structuring",
+        description:
+          "It all starts with jointly defining your technical specifications. We plan the volumes required for the campaign together and act on your specific requirements: targeted regional origins (Centre, South or South-West) and the aromatic profiles you're looking for.",
+      },
+      {
+        titleLine1: "Secure Sourcing at",
+        titleLine2: "the Source (GREEN FARMERS)",
+        description:
+          "Once the order is validated, GREEN FARMERS activates its network of partner producers for traceable, secure sourcing directly at the source, guaranteeing the origin and quality of every batch.",
+      },
+      {
+        titleLine1: "Centralization",
+        titleLine2: "& Buffer Storage",
+        description:
+          "Collected volumes are centralized in our intermediary, ventilated storage warehouses across our production basins, acting as buffer stock to guarantee continuity of flow through to shipment.",
+      },
+    ],
   },
   languageSwitcher: {
     label: "Language",

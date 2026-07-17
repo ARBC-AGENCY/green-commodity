@@ -1,3 +1,9 @@
+type ProcessStep = {
+  titleLine1: string;
+  titleLine2: string;
+  description: string;
+};
+
 export type Dictionary = {
   common: {
     home: string;
@@ -93,6 +99,7 @@ export type Dictionary = {
       h1Emphasis: string;
       paragraph: string;
     };
+    processSteps: [ProcessStep, ProcessStep, ProcessStep];
   };
   languageSwitcher: {
     label: string;

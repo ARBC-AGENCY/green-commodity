@@ -3,6 +3,7 @@ import { ChainHeroSection } from "@/components/the-chain/ChainHeroSection";
 import { GreenFarmersSection } from "@/components/the-chain/GreenFarmersSection";
 import { GreenCommoditiesSection } from "@/components/the-chain/GreenCommoditiesSection";
 import { SecureProcessSection } from "@/components/the-chain/SecureProcessSection";
+import { ProcessStepsSection } from "@/components/the-chain/ProcessStepsSection";
 
 export default function TheChainPage() {
   return (
@@ -11,6 +12,7 @@ export default function TheChainPage() {
       <GreenFarmersSection />
       <GreenCommoditiesSection />
       <SecureProcessSection />
+      <ProcessStepsSection />
     </HorizontalScrollSections>
   );
 }

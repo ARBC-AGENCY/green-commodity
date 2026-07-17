@@ -90,7 +90,7 @@ export function StoryIntroSection() {
                 className="absolute right-0 top-full -mt-3 homesection:w-52 max-w-none"
               />
             </div>
-            <p className="max-w-md font-apparel text-xs max-homesection:text-center xl:text-sm leading-normal text-body mt-10">
+            <p className="max-w-md font-apparel text-sm max-homesection:text-center xl:text-sm leading-normal text-body mt-10">
               {intro.paragraph}
             </p>
           </div>

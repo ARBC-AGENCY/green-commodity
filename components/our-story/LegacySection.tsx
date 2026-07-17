@@ -88,11 +88,11 @@ export function LegacySection() {
             />
           </div>
         </div>
-        <p className="max-w-md  font-apparel hidden homesection:flex text-xs xl:text-sm leading-snug text-body xl:mt-10">
+        <p className="max-w-md  font-apparel hidden homesection:flex text-sm xl:text-sm leading-snug text-body xl:mt-10">
           {legacy.paragraph}
         </p>
         <div className="relative inline-block w-fit max-[550px]:items-center">
-          <p className="max-w-md max-[550px]:text-center homesection:hidden font-apparel text-xs xl:text-sm leading-snug text-body xl:mt-10">
+          <p className="max-w-md max-[550px]:text-center homesection:hidden font-apparel text-sm xl:text-sm leading-snug text-body xl:mt-10">
             {legacy.paragraph}
           </p>
           <p className="max-w-sm  max-[550px]:text-center max-[550px]:justify-self-center font-lovelace text-sm xl:text-base font-bold leading-normal xl:leading-snug text-green">
@@ -134,7 +134,7 @@ export function LegacySection() {
             <span className="text-orange">{legacy.founded.and}</span>{" "}
             <span className="text-green">{legacy.founded.brand2}</span>
           </h3>
-          <p className="max-w-md  max-[550px]:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
+          <p className="max-w-md  max-[550px]:text-center font-apparel text-sm xl:text-sm leading-snug text-body">
             {legacy.founded.paragraph}
           </p>
         </div>

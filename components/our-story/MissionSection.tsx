@@ -89,7 +89,7 @@ export function MissionSection() {
             />
           </div>
         </div>
-        <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
+        <p className="max-w-md max-homesection:text-center font-apparel text-sm xl:text-sm leading-snug text-body">
           {mission.paragraph}
         </p>
       </div>
@@ -131,7 +131,7 @@ export function MissionSection() {
               />
             </div>
           </div>
-          <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
+          <p className="max-w-md max-homesection:text-center font-apparel text-sm xl:text-sm leading-snug text-body">
             {mission.missionParagraph}
           </p>
         </div>
@@ -157,7 +157,7 @@ export function MissionSection() {
               />
             </div>
           </div>
-          <p className="max-w-md max-homesection:text-center font-apparel text-xs xl:text-sm leading-snug text-body">
+          <p className="max-w-md max-homesection:text-center font-apparel text-sm xl:text-sm leading-snug text-body">
             {mission.engagementParagraph}
           </p>
         </div>
