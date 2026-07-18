@@ -139,6 +139,10 @@ export type Dictionary = {
         rows: [SpecRow, SpecRow, SpecRow, SpecRow, SpecRow, SpecRow];
       };
     };
+    certifications: {
+      heading: string;
+      paragraph: string;
+    };
   };
   languageSwitcher: {
     label: string;

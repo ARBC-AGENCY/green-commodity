@@ -201,6 +201,11 @@ const en: Dictionary = {
         ],
       },
     },
+    certifications: {
+      heading: "Certifications",
+      paragraph:
+        "Grown in Cameroonian terroir, our 100% local cocoa is certified compliant with national and international standards by recognized control and regulatory bodies.",
+    },
   },
   languageSwitcher: {
     label: "Language",

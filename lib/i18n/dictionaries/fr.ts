@@ -201,6 +201,11 @@ const fr: Dictionary = {
         ],
       },
     },
+    certifications: {
+      heading: "Certifications",
+      paragraph:
+        "Issu du terroir camerounais, notre cacao 100 % local est certifié conforme aux normes nationales et internationales par les organismes de contrôle et de régulation reconnus.",
+    },
   },
   languageSwitcher: {
     label: "Langue",
