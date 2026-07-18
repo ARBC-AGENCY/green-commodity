@@ -30,52 +30,52 @@ export const lovelace = localFont({
 export const apparel = localFont({
   src: [
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-thin.otf",
+      path: "../public/fonts/apparel/Apparel Thin.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-thinit.otf",
+      path: "../public/fonts/apparel/Apparel Thin It.ttf",
       weight: "100",
       style: "italic",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-light.otf",
+      path: "../public/fonts/apparel/Apparel Light.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-lightit.otf",
+      path: "../public/fonts/apparel/Apparel Light It.ttf",
       weight: "300",
       style: "italic",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-regular.otf",
+      path: "../public/fonts/apparel/Apparel Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-regularit.otf",
+      path: "../public/fonts/apparel/Apparel Regular It.ttf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-bold.otf",
+      path: "../public/fonts/apparel/Apparel Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-boldit.otf",
+      path: "../public/fonts/apparel/Apparel Bold It.ttf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-black.otf",
+      path: "../public/fonts/apparel/Apparel Black.ttf",
       weight: "900",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-apparel-blackit.otf",
+      path: "../public/fonts/apparel/Apparel Black It.ttf",
       weight: "900",
       style: "italic",
     },
@@ -87,52 +87,52 @@ export const apparel = localFont({
 export const apparelDisplay = localFont({
   src: [
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-thin.otf",
+      path: "../public/fonts/apparel/Apparel Display Thin.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-thinit.otf",
+      path: "../public/fonts/apparel/Apparel Display Thin It.ttf",
       weight: "100",
       style: "italic",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-light.otf",
+      path: "../public/fonts/apparel/Apparel Display Light.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-lightit.otf",
+      path: "../public/fonts/apparel/Apparel Display Light It.ttf",
       weight: "300",
       style: "italic",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-regular.otf",
+      path: "../public/fonts/apparel/Apparel Display Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-regularit.otf",
+      path: "../public/fonts/apparel/Apparel Display Regular It.ttf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-bold.otf",
+      path: "../public/fonts/apparel/Apparel Display Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-boldit.otf",
+      path: "../public/fonts/apparel/Apparel Display Bold It.ttf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-black.otf",
+      path: "../public/fonts/apparel/Apparel Display Black.ttf",
       weight: "900",
       style: "normal",
     },
     {
-      path: "../public/fonts/apparel/Fontspring-DEMO-appareldisplay-blackit.otf",
+      path: "../public/fonts/apparel/Apparel Display Black It.ttf",
       weight: "900",
       style: "italic",
     },
