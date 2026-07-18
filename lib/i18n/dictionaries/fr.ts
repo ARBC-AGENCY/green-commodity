@@ -207,6 +207,20 @@ const fr: Dictionary = {
         "Issu du terroir camerounais, notre cacao 100 % local est certifié conforme aux normes nationales et internationales par les organismes de contrôle et de régulation reconnus.",
     },
   },
+  impact: {
+    hero: {
+      h1Prefix: "La",
+      h1Emphasis: "charte",
+      h1Suffix: "sociale",
+      h1Line2: "et environnementale",
+      axisLabel: "AXE 1 :",
+      axisTitle: "Inclusion financière & Bancarisation",
+      paragraph1:
+        "En intégrant nos producteurs partenaires dans un système financier transparent, nous sécurisons leurs revenus et stimulons l'épargne locale.",
+      paragraph2:
+        "Cette bancarisation concrète leur ouvre l'accès aux services financiers essentiels et au crédit, offrant aux familles agricoles les leviers nécessaires pour investir durablement dans leur avenir.",
+    },
+  },
   languageSwitcher: {
     label: "Langue",
   },

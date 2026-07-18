@@ -207,6 +207,20 @@ const en: Dictionary = {
         "Grown in Cameroonian terroir, our 100% local cocoa is certified compliant with national and international standards by recognized control and regulatory bodies.",
     },
   },
+  impact: {
+    hero: {
+      h1Prefix: "The",
+      h1Emphasis: "Charter",
+      h1Suffix: "for Social",
+      h1Line2: "and Environmental Impact",
+      axisLabel: "AXIS 1:",
+      axisTitle: "Financial Inclusion & Banking Access",
+      paragraph1:
+        "By bringing our partner producers into a transparent financial system, we secure their income and encourage local savings.",
+      paragraph2:
+        "This concrete access to banking opens up essential financial services and credit, giving farming families the means they need to invest sustainably in their future.",
+    },
+  },
   languageSwitcher: {
     label: "Language",
   },

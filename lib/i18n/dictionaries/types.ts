@@ -144,6 +144,18 @@ export type Dictionary = {
       paragraph: string;
     };
   };
+  impact: {
+    hero: {
+      h1Prefix: string;
+      h1Emphasis: string;
+      h1Suffix: string;
+      h1Line2: string;
+      axisLabel: string;
+      axisTitle: string;
+      paragraph1: string;
+      paragraph2: string;
+    };
+  };
   languageSwitcher: {
     label: string;
   };
