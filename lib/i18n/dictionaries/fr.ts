@@ -176,6 +176,31 @@ const fr: Dictionary = {
         },
       ],
     },
+    specifications: {
+      h1Line1: "Nos Spécifications",
+      h1Line2: "Techniques Garanties",
+      paragraph:
+        "Pour chaque volume expédié vers vos ports de livraison, nous vous garantissons le strict respect des critères de tolérance internationaux suivants",
+      table: {
+        headers: [
+          "Paramètres Phytosanitaires",
+          "Seuils garantis par Green Commodities",
+          "Exigences standards du marché",
+        ],
+        rows: [
+          [
+            "Taux d'Humidité",
+            "6,5% à 7,5% (Casse nette et sèche)",
+            "≤ 7,5% (Grade 1 international)",
+          ],
+          ["Fèves Moisies", "Moins de 2%", "Maximum 3%"],
+          ["Fèves Ardoisées (Slaty)", "Moins de 3%", "Maximum 3%"],
+          ["Fèves Endommagées / Insectes", "Moins de 3%", "Maximum 3%"],
+          ["Fèves Germées", "Moins de 3%", "Maximum 3%"],
+          ["Impuretés & Corps Étrangers", "Moins de 0,5%", "Maximum 0,5%"],
+        ],
+      },
+    },
   },
   languageSwitcher: {
     label: "Langue",

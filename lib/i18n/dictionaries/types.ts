@@ -9,6 +9,8 @@ type FeatureItem = {
   description: string;
 };
 
+type SpecRow = [string, string, string];
+
 export type Dictionary = {
   common: {
     home: string;
@@ -127,6 +129,15 @@ export type Dictionary = {
       emphasis: string;
       paragraph: string;
       items: [FeatureItem, FeatureItem, FeatureItem];
+    };
+    specifications: {
+      h1Line1: string;
+      h1Line2: string;
+      paragraph: string;
+      table: {
+        headers: [string, string, string];
+        rows: [SpecRow, SpecRow, SpecRow, SpecRow, SpecRow, SpecRow];
+      };
     };
   };
   languageSwitcher: {

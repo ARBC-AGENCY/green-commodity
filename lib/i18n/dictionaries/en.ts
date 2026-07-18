@@ -176,6 +176,31 @@ const en: Dictionary = {
         },
       ],
     },
+    specifications: {
+      h1Line1: "Our Guaranteed",
+      h1Line2: "Technical Specifications",
+      paragraph:
+        "For every volume shipped to your delivery ports, we guarantee strict compliance with the following international tolerance criteria",
+      table: {
+        headers: [
+          "Phytosanitary Parameters",
+          "Thresholds Guaranteed by Green Commodities",
+          "Standard Market Requirements",
+        ],
+        rows: [
+          [
+            "Moisture Content",
+            "6.5% to 7.5% (Clean, dry break)",
+            "≤ 7.5% (International Grade 1)",
+          ],
+          ["Moldy Beans", "Less than 2%", "Maximum 3%"],
+          ["Slaty Beans", "Less than 3%", "Maximum 3%"],
+          ["Damaged Beans / Insects", "Less than 3%", "Maximum 3%"],
+          ["Germinated Beans", "Less than 3%", "Maximum 3%"],
+          ["Impurities & Foreign Matter", "Less than 0.5%", "Maximum 0.5%"],
+        ],
+      },
+    },
   },
   languageSwitcher: {
     label: "Language",
