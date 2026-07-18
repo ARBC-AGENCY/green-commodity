@@ -144,6 +144,15 @@ const fr: Dictionary = {
       paragraph:
         "Cultivées au cœur des écosystèmes riches de nos bassins de production, nos fèves développent une identité unique. Grâce à la maîtrise complète du protocole post-récolte par nos réseaux de producteurs, nous éliminons les défauts courants (fèves collées, odeurs de fumée ou de moisi) pour offrir aux maîtres chocolatiers et transformateurs industriels une régularité aromatique rare et authentique.",
     },
+    gradeQuality: {
+      h1Line1: "Une Rigueur Analytique :",
+      h1Emphasis: "Analytique :",
+      h1Line3: "L'Excellence du Grade 1",
+      h1Line4: "du Grade 1",
+      h1Line5: "(Export Premium)",
+      paragraph:
+        "Chez Green Commodities, nous ne laissons aucune place au hasard. L'harmonie de notre \"orchestre de fèves\" est validée par des contrôles de qualité stricts (Cut Test international, vérification des odeurs et contrôles d'humidité).",
+    },
   },
   languageSwitcher: {
     label: "Langue",

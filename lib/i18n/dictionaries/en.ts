@@ -144,6 +144,15 @@ const en: Dictionary = {
       paragraph:
         "Grown at the heart of the rich ecosystems of our production basins, our beans develop a unique identity. Thanks to full control of the post-harvest protocol across our producer networks, we eliminate common defects (clumped beans, smoky or musty odors) to offer master chocolatiers and industrial processors a rare, authentic aromatic consistency.",
     },
+    gradeQuality: {
+      h1Line1: "An Analytical Rigor:",
+      h1Emphasis: "Rigor:",
+      h1Line3: "The Excellence of Grade 1",
+      h1Line4: "of Grade 1",
+      h1Line5: "(Premium Export)",
+      paragraph:
+        "At Green Commodities, we leave nothing to chance. The harmony of our \"orchestra of beans\" is validated by strict quality controls (international Cut Test, odor checks and moisture controls).",
+    },
   },
   languageSwitcher: {
     label: "Language",

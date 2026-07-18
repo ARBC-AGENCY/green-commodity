@@ -109,6 +109,14 @@ export type Dictionary = {
       h1Line3: string;
       paragraph: string;
     };
+    gradeQuality: {
+      h1Line1: string;
+      h1Emphasis: string;
+      h1Line3: string;
+      h1Line4: string;
+      h1Line5: string;
+      paragraph: string;
+    };
   };
   languageSwitcher: {
     label: string;
