@@ -101,6 +101,15 @@ export type Dictionary = {
     };
     processSteps: [ProcessStep, ProcessStep, ProcessStep];
   };
+  ourCocoas: {
+    hero: {
+      h1Prefix: string;
+      h1Emphasis: string;
+      h1Line2: string;
+      h1Line3: string;
+      paragraph: string;
+    };
+  };
   languageSwitcher: {
     label: string;
   };

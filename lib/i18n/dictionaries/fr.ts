@@ -135,6 +135,16 @@ const fr: Dictionary = {
       },
     ],
   },
+  ourCocoas: {
+    hero: {
+      h1Prefix: "La",
+      h1Emphasis: "Signature",
+      h1Line2: "Aromatique du",
+      h1Line3: "Terroir Camerounais",
+      paragraph:
+        "Cultivées au cœur des écosystèmes riches de nos bassins de production, nos fèves développent une identité unique. Grâce à la maîtrise complète du protocole post-récolte par nos réseaux de producteurs, nous éliminons les défauts courants (fèves collées, odeurs de fumée ou de moisi) pour offrir aux maîtres chocolatiers et transformateurs industriels une régularité aromatique rare et authentique.",
+    },
+  },
   languageSwitcher: {
     label: "Langue",
   },

@@ -135,6 +135,16 @@ const en: Dictionary = {
       },
     ],
   },
+  ourCocoas: {
+    hero: {
+      h1Prefix: "The Aromatic",
+      h1Emphasis: "Signature",
+      h1Line2: "of the Cameroonian",
+      h1Line3: "Terroir",
+      paragraph:
+        "Grown at the heart of the rich ecosystems of our production basins, our beans develop a unique identity. Thanks to full control of the post-harvest protocol across our producer networks, we eliminate common defects (clumped beans, smoky or musty odors) to offer master chocolatiers and industrial processors a rare, authentic aromatic consistency.",
+    },
+  },
   languageSwitcher: {
     label: "Language",
   },

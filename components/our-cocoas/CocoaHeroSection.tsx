@@ -6,13 +6,13 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { Volume2, VolumeX } from "lucide-react";
 import { useTranslations } from "@/components/i18n/LocaleProvider";
 import { Trait, type TraitHandle } from "@/components/transition/Trait";
-import { ChainVideo, type ChainVideoHandle } from "./ChainVideo";
+import { CocoaVideo, type CocoaVideoHandle } from "./CocoaVideo";
 import { SocialLinks } from "@/components/home/SocialLinks";
 import { useHorizontalScroll } from "@/components/home/HorizontalScrollSections";
 
-export function SecureProcessSection() {
+export function CocoaHeroSection() {
   const t = useTranslations();
-  const secureProcess = t.theChain.secureProcess;
+  const hero = t.ourCocoas.hero;
   const { containerAnimation } = useHorizontalScroll();
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -21,13 +21,13 @@ export function SecureProcessSection() {
   const descRef = useRef<HTMLParagraphElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
   const traitRef = useRef<TraitHandle>(null);
-  const chainVideoRef = useRef<ChainVideoHandle>(null);
+  const cocoaVideoRef = useRef<CocoaVideoHandle>(null);
   const [muted, setMuted] = useState(true);
 
   const toggleMuted = () => {
     const next = !muted;
     setMuted(next);
-    chainVideoRef.current?.setMuted(next);
+    cocoaVideoRef.current?.setMuted(next);
   };
 
   useGSAP(
@@ -83,28 +83,29 @@ export function SecureProcessSection() {
         <div className="relative inline-block w-fit">
           <h1
             ref={headingRef}
-            className="font-lovelace max-homesection:text-center text-xl homesection:text-2xl lg:text-2xl xl:text-3xl font-bold leading-none text-heading"
+            className="font-lovelace max-homesection:text-center text-xl homesection:text-2xl  xl:text-4xl font-bold leading-none text-heading"
           >
-            {secureProcess.h1Line1}
-            <br />
-            {secureProcess.h1Line2}
-            <br />
-            <span className="italic  outline-text text-2xl homesection:text-3xl lg:text-3xl xl:text-5xl">
-              {secureProcess.h1Emphasis}
+            {hero.h1Prefix}{" "}
+            <span className="relative italic outline-text">
+              {hero.h1Emphasis}
+              <Trait
+                ref={traitRef}
+                src="TRAIT 2.svg"
+                className="absolute left-0 -z-1 top-full -mt-3 homesection:-mt-5 homesection:w-40 xl:-mt-8 xl:w-64 max-w-none"
+              />
             </span>
+            <br />
+            {hero.h1Line2}
+            <br />
+            {hero.h1Line3}
           </h1>
-          <Trait
-            ref={traitRef}
-            src="TRAIT 2.svg"
-            className="absolute left-0 -mt-6  -z-1 top-full homesection:w-40 xl:-mt-3 xl:w-64 max-w-none"
-          />
         </div>
 
         <p
           ref={descRef}
-          className="max-w-md font-apparel xl:pl-20 xl:mt-5 text-sm leading-snug text-body max-homesection:text-center"
+          className="max-w-md font-apparel xl:pl-20 text-sm leading-snug text-body max-homesection:text-center"
         >
-          {secureProcess.paragraph}
+          {hero.paragraph}
         </p>
       </div>
 
@@ -112,7 +113,7 @@ export function SecureProcessSection() {
         ref={videoColRef}
         className="flex flex-col w-full homesection:h-3/5 homesection:w-[60%] xl:w-[50%]"
       >
-        <ChainVideo ref={chainVideoRef} />
+        <CocoaVideo ref={cocoaVideoRef} />
       </div>
 
       <div
@@ -121,10 +122,10 @@ export function SecureProcessSection() {
       >
         <SocialLinks
           labels={t.home.hero.social}
-          className="justify-self-start opacity-0"
+          className="justify-self-start"
         />
-        <span className="opacity-0 justify-self-center font-apparel text-xs uppercase tracking-[0.25em] text-heading/70">
-          {t.theChain.hero.slideHint}
+        <span className="max-[450px]:opacity-0 justify-self-center font-apparel text-xs uppercase tracking-[0.25em] text-heading/70">
+          {t.home.hero.slideHint}
         </span>
         <button
           type="button"
