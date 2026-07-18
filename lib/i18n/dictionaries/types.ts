@@ -4,6 +4,11 @@ type ProcessStep = {
   description: string;
 };
 
+type FeatureItem = {
+  title: string;
+  description: string;
+};
+
 export type Dictionary = {
   common: {
     home: string;
@@ -116,6 +121,12 @@ export type Dictionary = {
       h1Line4: string;
       h1Line5: string;
       paragraph: string;
+    };
+    qualityCriteria: {
+      heading: string;
+      emphasis: string;
+      paragraph: string;
+      items: [FeatureItem, FeatureItem, FeatureItem];
     };
   };
   languageSwitcher: {

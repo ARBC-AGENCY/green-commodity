@@ -153,6 +153,29 @@ const fr: Dictionary = {
       paragraph:
         "Chez Green Commodities, nous ne laissons aucune place au hasard. L'harmonie de notre \"orchestre de fèves\" est validée par des contrôles de qualité stricts (Cut Test international, vérification des odeurs et contrôles d'humidité).",
     },
+    qualityCriteria: {
+      heading: "Pour",
+      emphasis: "sécuriser",
+      paragraph:
+        "vos approvisionnements de spécialité, nos lots sont systématiquement calibrés pour répondre aux exigences les plus élevées du Grade 1 (Export Premium) :",
+      items: [
+        {
+          title: "Séchage Homogène & Casse Nette :",
+          description:
+            "Un séchage naturel uniforme garantissant un son cassant lors du contrôle de rupture.",
+        },
+        {
+          title: "Fermentation d'Exception :",
+          description:
+            "Fèves parfaitement fermentées (minimum 85%), arborant une couleur brun chocolat homogène, une structure interne ouverte et un arôme agréable.",
+        },
+        {
+          title: "Pureté Aromatique :",
+          description:
+            "Sélection exclusive de fèves dégageant des notes de chocolat, de fruits fermentés ou de cacao frais. Toutes les odeurs de moisissure, de fumée ou d'intrants chimiques sont rigoureusement exclues à la source.",
+        },
+      ],
+    },
   },
   languageSwitcher: {
     label: "Langue",

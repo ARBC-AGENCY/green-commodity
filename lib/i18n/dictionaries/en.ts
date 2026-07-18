@@ -153,6 +153,29 @@ const en: Dictionary = {
       paragraph:
         "At Green Commodities, we leave nothing to chance. The harmony of our \"orchestra of beans\" is validated by strict quality controls (international Cut Test, odor checks and moisture controls).",
     },
+    qualityCriteria: {
+      heading: "To",
+      emphasis: "secure",
+      paragraph:
+        "your specialty supply, our lots are systematically calibrated to meet the highest requirements of Grade 1 (Premium Export):",
+      items: [
+        {
+          title: "Even Drying & Clean Break:",
+          description:
+            "Uniform natural drying that guarantees a crisp snap during the break test.",
+        },
+        {
+          title: "Exceptional Fermentation:",
+          description:
+            "Perfectly fermented beans (minimum 85%), showing a consistent chocolate-brown color, an open internal structure and a pleasant aroma.",
+        },
+        {
+          title: "Aromatic Purity:",
+          description:
+            "An exclusive selection of beans with notes of chocolate, fermented fruit or fresh cocoa. Any trace of mold, smoke, or chemical odors is rigorously excluded at the source.",
+        },
+      ],
+    },
   },
   languageSwitcher: {
     label: "Language",
