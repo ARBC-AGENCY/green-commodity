@@ -9,6 +9,7 @@ import {
 } from "react";
 import Image from "next/image";
 import Script from "next/script";
+import { useIntroActive } from "@/components/intro/IntroGate";
 import type { StreamPlayer } from "@/lib/cloudflare-stream";
 
 const STREAM_CUSTOMER = "customer-sjpsqgc6n64xivkb";
@@ -27,11 +28,18 @@ export const HeroVideo = forwardRef<HeroVideoHandle, HeroVideoProps>(
     const iframeRef = useRef<HTMLIFrameElement>(null);
     const playerRef = useRef<StreamPlayer | null>(null);
     const [sdkReady, setSdkReady] = useState(false);
+    // This section sits inside the horizontal scroll track's pinned wrapper,
+    // which GSAP reparents on every ScrollTrigger refresh - moving an iframe
+    // in the DOM forces it to reload. Keeping the iframe unmounted while the
+    // intro overlay is up avoids that churn racing the intro's own video for
+    // bandwidth, and it's invisible behind the opaque overlay anyway.
+    const introActive = useIntroActive();
 
     useEffect(() => {
-      if (!sdkReady || !iframeRef.current || !window.Stream) return;
+      if (introActive || !sdkReady || !iframeRef.current || !window.Stream)
+        return;
       playerRef.current = window.Stream(iframeRef.current);
-    }, [sdkReady]);
+    }, [introActive, sdkReady]);
 
     useImperativeHandle(
       ref,
@@ -55,18 +63,24 @@ export const HeroVideo = forwardRef<HeroVideoHandle, HeroVideoProps>(
         <Script
           src="https://embed.cloudflarestream.com/embed/sdk.latest.js"
           strategy="afterInteractive"
+          // `onLoad` only fires the first time this script ever loads on the
+          // page; later mounts (this component remounting after the intro,
+          // repeat visits, Fast Refresh) get `onReady` instead.
           onLoad={() => setSdkReady(true)}
+          onReady={() => setSdkReady(true)}
         />
 
         <div className="absolute inset-0 overflow-hidden bg-transparent">
-          <iframe
-            ref={iframeRef}
-            src={src}
-            loading="eager"
-            className="absolute inset-0 h-full w-full border-0 bg-transparent"
-            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-            allowFullScreen
-          />
+          {!introActive && (
+            <iframe
+              ref={iframeRef}
+              src={src}
+              loading="eager"
+              className="absolute inset-0 h-full w-full border-0 bg-transparent"
+              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+              allowFullScreen
+            />
+          )}
         </div>
 
         <div className="absolute max-homesection:hidden -bottom-10 left-2 w-38 drop-shadow-xl homesection:bottom-15 homesection:-left-5 homesection:w-36 xl:-bottom-3 xl:w-55">

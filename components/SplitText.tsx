@@ -92,6 +92,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         if (!targets.length && splitType.includes('lines') && self.lines.length) targets = self.lines;
         if (!targets.length) targets = self.chars || self.words || self.lines;
       };
+      let revealTween: gsap.core.Tween | undefined;
       const splitInstance = new GSAPSplitText(el, {
         type: splitType,
         smartWrap: true,
@@ -102,7 +103,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         reduceWhiteSpace: false,
         onSplit: (self: GSAPSplitText) => {
           assignTargets(self);
-          return gsap.fromTo(
+          revealTween = gsap.fromTo(
             targets,
             { ...from },
             {
@@ -125,9 +126,21 @@ const SplitText: React.FC<SplitTextProps> = ({
               force3D: true
             }
           );
+          return revealTween;
         }
       });
       el._rbsplitInstance = splitInstance;
+      // This trigger is meant to fire as soon as the text is on screen
+      // (threshold 0 / rootMargin 0), which is normally already true by the
+      // time it's created. GSAP's own deferred refresh cycle can land before
+      // layout has fully settled on a cold page load, silently missing that
+      // "already past start" state — a synchronous refresh re-checks it
+      // immediately instead of waiting. Scoped to just this ScrollTrigger
+      // instance (not the global ScrollTrigger.refresh()), which would also
+      // re-run every OTHER trigger on the page — including any `pin: true`
+      // one — and pin refreshes can reparent the pinned element in the DOM,
+      // which force-reloads any <iframe> (e.g. a background video) inside it.
+      revealTween?.scrollTrigger?.refresh();
       return () => {
         ScrollTrigger.getAll().forEach(st => {
           if (st.trigger === el) st.kill();

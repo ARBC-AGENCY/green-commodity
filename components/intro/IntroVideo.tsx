@@ -11,6 +11,10 @@ import type { StreamPlayer } from "@/lib/cloudflare-stream";
 const STREAM_VIDEO_ID = "c77c074d8da70443dd38c706e8c0c5e8";
 const STREAM_CUSTOMER = "customer-sjpsqgc6n64xivkb";
 const EXPLORE_DELAY_MS = 10_000;
+// If the stream never reaches "playing" (blocked network, slow connection,
+// Cloudflare outage), reveal the page anyway rather than leaving the
+// preloader stuck on top of it forever.
+const READY_FALLBACK_MS = 6_000;
 
 type IntroVideoProps = {
   /** Fires once the video has actually started rendering frames (safe to reveal it). */
@@ -58,8 +62,10 @@ export function IntroVideo({ onReady, onFinished }: IntroVideoProps) {
 
     player.addEventListener("playing", handlePlaying);
     player.addEventListener("ended", onFinished);
+    const readyFallback = setTimeout(handlePlaying, READY_FALLBACK_MS);
 
     return () => {
+      clearTimeout(readyFallback);
       player.removeEventListener("playing", handlePlaying);
       player.removeEventListener("ended", onFinished);
     };
@@ -79,7 +85,12 @@ export function IntroVideo({ onReady, onFinished }: IntroVideoProps) {
       <Script
         src="https://embed.cloudflarestream.com/embed/sdk.latest.js"
         strategy="afterInteractive"
+        // `onLoad` only fires the very first time this script is ever loaded
+        // on the page; on any later mount (repeat visit, soft nav, Fast
+        // Refresh) Next calls `onReady` instead, so both need to flip the
+        // flag or `sdkReady` can get stuck false forever.
         onLoad={() => setSdkReady(true)}
+        onReady={() => setSdkReady(true)}
       />
       <div className="absolute inset-0 overflow-hidden">
         <iframe
