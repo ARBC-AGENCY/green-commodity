@@ -220,6 +220,24 @@ const en: Dictionary = {
       paragraph2:
         "This concrete access to banking opens up essential financial services and credit, giving farming families the means they need to invest sustainably in their future.",
     },
+    axes: [
+      {
+        label: "AXIS 2:",
+        title: "Preserving the Ecosystem (Agroforestry)",
+        paragraph1:
+          "Through the deployment of strict agroforestry practices, we oversee shade-grown cultivation to restore soil fertility and maintain biodiversity across our production basins.",
+        paragraph2:
+          "This eco-responsible approach is the safeguard that guarantees our clients a lasting supply, fully protective of forests and in complete compliance with European anti-deforestation requirements.",
+      },
+      {
+        label: "AXIS 3:",
+        title: "Education, Social Support & Mentoring",
+        paragraph1:
+          "Our approach places the producer's family at the center of the model. Upstream, we train and equip growers to add value to their work. We also remobilize the local active youth to ensure generational renewal and offer a sustainable future to the communities across our production basins.",
+        paragraph2:
+          "Downstream, we protect their family unit by acting for education: funding school fees, distributing school kits and setting up a mentoring program for young people.",
+      },
+    ],
   },
   languageSwitcher: {
     label: "Language",

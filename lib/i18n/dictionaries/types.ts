@@ -11,6 +11,13 @@ type FeatureItem = {
 
 type SpecRow = [string, string, string];
 
+type AxisItem = {
+  label: string;
+  title: string;
+  paragraph1: string;
+  paragraph2: string;
+};
+
 export type Dictionary = {
   common: {
     home: string;
@@ -155,6 +162,7 @@ export type Dictionary = {
       paragraph1: string;
       paragraph2: string;
     };
+    axes: [AxisItem, AxisItem];
   };
   languageSwitcher: {
     label: string;

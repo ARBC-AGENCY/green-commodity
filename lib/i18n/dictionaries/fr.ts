@@ -220,6 +220,24 @@ const fr: Dictionary = {
       paragraph2:
         "Cette bancarisation concrète leur ouvre l'accès aux services financiers essentiels et au crédit, offrant aux familles agricoles les leviers nécessaires pour investir durablement dans leur avenir.",
     },
+    axes: [
+      {
+        label: "AXE 2 :",
+        title: "Préservation de l'écosystème (agroforesterie)",
+        paragraph1:
+          "À travers le déploiement de pratiques d'agroforesterie strictes, nous encadrons la culture sous ombrage afin de restaurer la fertilité des sols et de maintenir la biodiversité de nos bassins de production.",
+        paragraph2:
+          "Cette démarche écoresponsable est le bouclier qui garantit à nos clients un approvisionnement pérenne, totalement protecteur des forêts et en parfaite conformité avec les exigences européennes anti-déforestation",
+      },
+      {
+        label: "AXE 3 :",
+        title: "Éducation, soutien social & mentoring",
+        paragraph1:
+          "Notre démarche place la famille du producteur au centre du modèle. En amont, nous formons et équipons les planteurs pour valoriser leur travail. Nous remobilisons aussi la jeunesse active locale, pour assurer le renouvellement des générations et offrir un avenir durable aux communautés de nos bassins de production..",
+        paragraph2:
+          "En aval, nous protégeons leur cellule familiale en agissant pour l'éducation : financement des frais de scolarité, distribution de kits scolaires et mise en place d'un programme de mentorat pour les jeunes.",
+      },
+    ],
   },
   languageSwitcher: {
     label: "Langue",
