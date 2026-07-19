@@ -41,7 +41,7 @@ const en: Dictionary = {
       quoteLine1: "The song",
       quoteLine2: "of cacao",
       paragraph:
-        "When I was a child in Obala, my grandmother used to repeat a phrase in the years of good harvests: \"This year, the cacao has sung.\" It was our way of saying that the land had been generous, that the children's school fees were paid, and that our families would live with dignity. It was this shared love for the land that convinced my grandmother to entrust me with my first plots.",
+        'When I was a child in Obala, my grandmother used to repeat a phrase in the years of good harvests: "This year, the cacao has sung." It was our way of saying that the land had been generous, that the children\'s school fees were paid, and that our families would live with dignity. It was this shared love for the land that convinced my grandmother to entrust me with my first plots.',
     },
     legacy: {
       h1Line1: "Then,",
@@ -151,7 +151,7 @@ const en: Dictionary = {
       h1Line4: "of Grade 1",
       h1Line5: "(Premium Export)",
       paragraph:
-        "At Green Commodities, we leave nothing to chance. The harmony of our \"orchestra of beans\" is validated by strict quality controls (international Cut Test, odor checks and moisture controls).",
+        'At Green Commodities, we leave nothing to chance. The harmony of our "orchestra of beans" is validated by strict quality controls (international Cut Test, odor checks and moisture controls).',
     },
     qualityCriteria: {
       heading: "To",
@@ -242,6 +242,62 @@ const en: Dictionary = {
   gallery: {
     heading: "Gallery",
     seeMore: "Swipe",
+  },
+  blog: {
+    comingSoon: "Coming Soon",
+  },
+  order: {
+    contactHeadingLine1: "Contact",
+    contactHeadingLine2: "us here:",
+    whatsappLabel: "WhatsApp",
+    emailLabel: "Email",
+    section1Title: "1. Company Information",
+    companyNameLabel: "Chocolate maker / company name",
+    structureTypeLabel: "Type of structure",
+    section2Title: "2. Primary Contact",
+    fullNameLabel: "Full name",
+    positionLabel: "Role / Position",
+    emailAddressLabel: "Professional email address",
+    phoneLabel: "Phone ( with country code )",
+    section3Title: "3. Your Sample Request",
+    section3Suffix: "( grade 1 premium )",
+    formatDiscoveryTitle: "Discovery & Lab Format",
+    formatDiscoveryWeight: "(0.50 kg)",
+    formatDiscoveryDescription:
+      "Ideal for a first cut test and moisture analysis.",
+    formatAromaticTitle: "Aromatic Profile Format",
+    formatAromaticWeight: "(1.00 kg)",
+    formatAromaticDescription:
+      "Designed for micro-roasting and complex profiling tests.",
+    originLabel: "Preferred origin",
+    originOptions: ["Obala (center)", "South", "South-West"],
+    section4Title: "4. Volumes & Complex Specifications",
+    annualVolumeLabel: "Estimated annual volume ( fine cocoa )",
+    annualVolumeOptions: [
+      "Less than 5 tonnes / year",
+      "5 to 20 tonnes / year",
+      "20 to 50 tonnes / year",
+      "More than 50 tonnes / year",
+    ],
+    requirementsLabel: "Requirements or open specifications",
+    requirementsPlaceholder:
+      "Specify your particular requirements here ( specific aromatic profile, port delivery constraints or questions related to EUDR data ) ...",
+    submitButton: "Send ",
+    submittingButton: "Sending...",
+    guaranteeLabel: "Compliance guarantee:",
+    guaranteeText:
+      "Your samples are rigorously selected, manually sorted and shipped by express freight ( DHL / UPS ) along with their technical data sheets.",
+    successMessage:
+      "Your request has been sent. You'll receive a confirmation email shortly.",
+    errorMessage:
+      "Something went wrong while sending your request. Please try again or contact us directly.",
+    step1Label: "Step 1 of 2",
+    step2Label: "Step 2 of 2",
+    nextButton: "Next",
+    backButton: "Back",
+    requiredFieldsError: "Please fill in all required fields.",
+    successHeading: "Request sent!",
+    newRequestButton: "Send another request",
   },
   languageSwitcher: {
     label: "Language",

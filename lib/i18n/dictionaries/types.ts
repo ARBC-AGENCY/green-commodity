@@ -18,6 +18,49 @@ type AxisItem = {
   paragraph2: string;
 };
 
+type OrderDictionary = {
+  contactHeadingLine1: string;
+  contactHeadingLine2: string;
+  whatsappLabel: string;
+  emailLabel: string;
+  section1Title: string;
+  companyNameLabel: string;
+  structureTypeLabel: string;
+  section2Title: string;
+  fullNameLabel: string;
+  positionLabel: string;
+  emailAddressLabel: string;
+  phoneLabel: string;
+  section3Title: string;
+  section3Suffix: string;
+  formatDiscoveryTitle: string;
+  formatDiscoveryWeight: string;
+  formatDiscoveryDescription: string;
+  formatAromaticTitle: string;
+  formatAromaticWeight: string;
+  formatAromaticDescription: string;
+  originLabel: string;
+  originOptions: [string, string, string];
+  section4Title: string;
+  annualVolumeLabel: string;
+  annualVolumeOptions: [string, string, string, string];
+  requirementsLabel: string;
+  requirementsPlaceholder: string;
+  submitButton: string;
+  submittingButton: string;
+  guaranteeLabel: string;
+  guaranteeText: string;
+  successMessage: string;
+  errorMessage: string;
+  step1Label: string;
+  step2Label: string;
+  nextButton: string;
+  backButton: string;
+  requiredFieldsError: string;
+  successHeading: string;
+  newRequestButton: string;
+};
+
 export type Dictionary = {
   common: {
     home: string;
@@ -168,6 +211,10 @@ export type Dictionary = {
     heading: string;
     seeMore: string;
   };
+  blog: {
+    comingSoon: string;
+  };
+  order: OrderDictionary;
   languageSwitcher: {
     label: string;
   };
