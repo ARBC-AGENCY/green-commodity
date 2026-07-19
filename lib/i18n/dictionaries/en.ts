@@ -239,6 +239,10 @@ const en: Dictionary = {
       },
     ],
   },
+  gallery: {
+    heading: "Gallery",
+    seeMore: "Swipe",
+  },
   languageSwitcher: {
     label: "Language",
   },

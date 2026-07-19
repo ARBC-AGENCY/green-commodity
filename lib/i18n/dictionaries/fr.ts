@@ -239,6 +239,10 @@ const fr: Dictionary = {
       },
     ],
   },
+  gallery: {
+    heading: "Galerie",
+    seeMore: "Balayer ",
+  },
   languageSwitcher: {
     label: "Langue",
   },

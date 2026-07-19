@@ -12,6 +12,13 @@ const AXIS_IMAGES = [
   "/images/INCRUSTATION IMAGE PORTRAIT 3.webp",
 ] as const;
 
+// Swapped in only between the homesection and xl breakpoints; the images
+// above are used below and above that range.
+const AXIS_IMAGES_MID = [
+  "/images/FRAME 1.webp",
+  "/images/INCRUSTATION MAIN CACAO 2.webp",
+] as const;
+
 export function AxesSection() {
   const t = useTranslations();
   const axes = t.impact.axes;
@@ -104,7 +111,14 @@ export function AxesSection() {
                 alt=""
                 fill
                 sizes="(min-width: 860px) 22vw, 90vw"
-                className="object-contain xl:object-cover"
+                className="block object-contain homesection:hidden xl:block xl:object-contain"
+              />
+              <Image
+                src={AXIS_IMAGES_MID[index]}
+                alt=""
+                fill
+                sizes="(min-width: 860px) 22vw, 90vw"
+                className="hidden object-contain homesection:block xl:hidden"
               />
             </div>
           </Fragment>

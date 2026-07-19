@@ -164,6 +164,10 @@ export type Dictionary = {
     };
     axes: [AxisItem, AxisItem];
   };
+  gallery: {
+    heading: string;
+    seeMore: string;
+  };
   languageSwitcher: {
     label: string;
   };
