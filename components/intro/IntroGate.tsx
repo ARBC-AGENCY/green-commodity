@@ -8,7 +8,6 @@ import {
   type ReactNode,
 } from "react";
 import { usePathname } from "next/navigation";
-import { hasSeenIntroRecently } from "@/lib/intro-storage";
 import { IntroExperience } from "./IntroExperience";
 
 const IntroActiveContext = createContext(false);
@@ -34,13 +33,19 @@ export function IntroGate({ children }: { children: ReactNode }) {
   const [introActive, setIntroActive] = useState(true);
 
   useLayoutEffect(() => {
-    if (isDevPreview) {
+    // Empty dependency array: this only runs once, on IntroGate's own mount.
+    // IntroGate lives in the root layout, which persists across client-side
+    // navigations (only `template.tsx` below it remounts per route) - so
+    // this effect only fires on a genuine fresh load (hard refresh, typed
+    // URL, new tab), never on an internal TransitionLink navigation. That's
+    // exactly the distinction the client wants: the intro replays on every
+    // real load of the homepage, but navigating to "/" from another page
+    // is just a normal page transition, no intro.
+    if (isDevPreview || pathname !== "/") {
       setIntroActive(false);
       return;
     }
-    const alreadySeen = hasSeenIntroRecently();
-    setShowIntro(!alreadySeen);
-    if (alreadySeen) setIntroActive(false);
+    setShowIntro(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

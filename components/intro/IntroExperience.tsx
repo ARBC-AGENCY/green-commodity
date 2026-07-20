@@ -2,16 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTransitionOverlay } from "../transition/TransitionProvider";
-import { markIntroSeen } from "@/lib/intro-storage";
 import { IntroVideo } from "./IntroVideo";
 
 type Phase = "preloader" | "video" | "done";
 
 const PRELOADER_TIMEOUT_MS = 6000;
-// Belt-and-suspenders: even if the video never fires "ended" and the user
-// never clicks "Explore" (e.g. the stream never loads at all), the intro
-// must still get out of the way on its own eventually.
-const AUTO_FINISH_MS = 16000;
+// Belt-and-suspenders only: covers the video never firing "ended" and the
+// user never clicking "Explore" (e.g. the stream never loads at all). This
+// must stay comfortably longer than the actual intro video's real length -
+// it previously cut the video off partway through because 16s was shorter
+// than the video itself. Tell Claude the real duration to size this
+// precisely; until then this generous ceiling just acts as a last resort.
+const AUTO_FINISH_MS = 90_000;
 
 /** Never let a stalled preloader animation block the site indefinitely. */
 function withTimeout(promise: Promise<void>, ms: number) {
@@ -35,7 +37,6 @@ export function IntroExperience({ onDone }: IntroExperienceProps) {
   const handleFinished = async () => {
     if (finishedRef.current) return;
     finishedRef.current = true;
-    markIntroSeen();
     await navigateWithTransition("/");
     setPhase("done");
     onDone();

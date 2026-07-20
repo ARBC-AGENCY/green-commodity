@@ -8,7 +8,7 @@ import { Volume2, VolumeX } from "lucide-react";
 import { useTranslations } from "@/components/i18n/LocaleProvider";
 import type { StreamPlayer } from "@/lib/cloudflare-stream";
 
-const STREAM_VIDEO_ID = "c77c074d8da70443dd38c706e8c0c5e8";
+const STREAM_VIDEO_ID = "3c59da67967faa4888390d73a3fb3f09";
 const STREAM_CUSTOMER = "customer-sjpsqgc6n64xivkb";
 const EXPLORE_DELAY_MS = 10_000;
 // If the stream never reaches "playing" (blocked network, slow connection,

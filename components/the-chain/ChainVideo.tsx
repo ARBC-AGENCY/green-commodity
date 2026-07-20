@@ -13,9 +13,7 @@ import { useIntroActive } from "@/components/intro/IntroGate";
 import type { StreamPlayer } from "@/lib/cloudflare-stream";
 
 const STREAM_CUSTOMER = "customer-sjpsqgc6n64xivkb";
-// Placeholder: reuses the homepage Hero video until the real footage for
-// this page is ready.
-const STREAM_VIDEO_ID = "b42cd581b28899970c852d4851f87a29";
+const STREAM_VIDEO_ID = "9b583550b37be7b7f19f842b6ceaccf4";
 
 export type ChainVideoHandle = {
   setMuted: (muted: boolean) => void;
