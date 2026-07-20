@@ -22,7 +22,7 @@ const AXIS_IMAGES_MID = [
 export function AxesSection() {
   const t = useTranslations();
   const axes = t.impact.axes;
-  const { containerAnimation } = useHorizontalScroll();
+  const { containerAnimation, resolved } = useHorizontalScroll();
 
   const sectionRef = useRef<HTMLElement>(null);
   const itemRefs = useRef<HTMLDivElement[]>([]);
@@ -48,19 +48,17 @@ export function AxesSection() {
         });
       };
 
-      if (containerAnimation) {
-        playReveal();
-        return;
-      }
+      if (!resolved) return;
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top 80%",
+        containerAnimation: containerAnimation ?? undefined,
+        start: isHorizontal ? "left 80%" : "top 80%",
         once: true,
         onEnter: playReveal,
       });
     },
-    { scope: sectionRef, dependencies: [containerAnimation] },
+    { scope: sectionRef, dependencies: [containerAnimation, resolved] },
   );
 
   return (

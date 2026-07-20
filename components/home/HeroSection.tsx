@@ -13,7 +13,7 @@ import { useHorizontalScroll } from "./HorizontalScrollSections";
 export function HeroSection() {
   const t = useTranslations();
   const hero = t.home.hero;
-  const { containerAnimation } = useHorizontalScroll();
+  const { containerAnimation, resolved } = useHorizontalScroll();
 
   const sectionRef = useRef<HTMLElement>(null);
   const videoColRef = useRef<HTMLDivElement>(null);
@@ -62,19 +62,17 @@ export function HeroSection() {
           .add(() => traitRef.current?.play(), "-=0.5");
       };
 
-      if (containerAnimation) {
-        playReveal();
-        return;
-      }
+      if (!resolved) return;
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top 80%",
+        containerAnimation: containerAnimation ?? undefined,
+        start: isHorizontal ? "left 80%" : "top 80%",
         once: true,
         onEnter: playReveal,
       });
     },
-    { scope: sectionRef, dependencies: [containerAnimation] },
+    { scope: sectionRef, dependencies: [containerAnimation, resolved] },
   );
 
   return (

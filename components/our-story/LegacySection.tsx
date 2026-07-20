@@ -11,7 +11,7 @@ import { useHorizontalScroll } from "@/components/home/HorizontalScrollSections"
 export function LegacySection() {
   const t = useTranslations();
   const legacy = t.ourStory.legacy;
-  const { containerAnimation } = useHorizontalScroll();
+  const { containerAnimation, resolved } = useHorizontalScroll();
 
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -46,19 +46,17 @@ export function LegacySection() {
           .add(() => calloutTraitRef.current?.play(), "-=0.4");
       };
 
-      if (containerAnimation) {
-        playReveal();
-        return;
-      }
+      if (!resolved) return;
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top 80%",
+        containerAnimation: containerAnimation ?? undefined,
+        start: isHorizontal ? "left 80%" : "top 80%",
         once: true,
         onEnter: playReveal,
       });
     },
-    { scope: sectionRef, dependencies: [containerAnimation] },
+    { scope: sectionRef, dependencies: [containerAnimation, resolved] },
   );
 
   return (
@@ -84,7 +82,7 @@ export function LegacySection() {
             <Trait
               ref={headingTraitRef}
               src="TRAIT 2.svg"
-              className="absolute right-0 top-full -mt-2 xl:-mt-6 homesection:w-32 xl:w-72 max-w-none"
+              className="absolute left-0 top-full -mt-2 xl:-mt-6 homesection:w-32 xl:w-52 max-w-none"
             />
           </div>
         </div>

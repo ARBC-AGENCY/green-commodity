@@ -17,10 +17,18 @@ const HORIZONTAL_QUERY = "(min-width: 860px)";
 type HorizontalScrollContextValue = {
   /** Set while the track is pinned+horizontal; null in normal vertical flow (mobile). */
   containerAnimation: gsap.core.Tween | null;
+  /** False for one render on mount: sections mount (and run their own
+   * effects) before this provider's effect does, so on that first pass
+   * `containerAnimation` is always still null - indistinguishable from
+   * genuine vertical/mobile mode. Sections must wait for this to flip true
+   * before creating their own reveal ScrollTrigger, or they build one
+   * against the wrong (about-to-change) layout. */
+  resolved: boolean;
 };
 
 const HorizontalScrollContext = createContext<HorizontalScrollContextValue>({
   containerAnimation: null,
+  resolved: false,
 });
 
 /** Lets a section's own ScrollTrigger work whether the homepage is in
@@ -38,12 +46,15 @@ export function HorizontalScrollSections({
   const trackRef = useRef<HTMLDivElement>(null);
   const [containerAnimation, setContainerAnimation] =
     useState<gsap.core.Tween | null>(null);
+  const [resolved, setResolved] = useState(false);
 
   useGSAP(
     () => {
       const mm = gsap.matchMedia();
+      let matched = false;
 
       mm.add(HORIZONTAL_QUERY, () => {
+        matched = true;
         const track = trackRef.current;
         const wrapper = wrapperRef.current;
         if (!track || !wrapper) return;
@@ -80,6 +91,7 @@ export function HorizontalScrollSections({
         // zero-length scroll distance is a known source of GSAP pin-spacer
         // glitches (stray reserved height, mistimed unpin).
         if (panels.length < 2) {
+          setResolved(true);
           return revert;
         }
 
@@ -108,6 +120,7 @@ export function HorizontalScrollSections({
         });
 
         setContainerAnimation(tween);
+        setResolved(true);
         tween.scrollTrigger?.refresh();
 
         return () => {
@@ -118,13 +131,20 @@ export function HorizontalScrollSections({
         };
       });
 
+      // gsap.matchMedia() evaluates conditions synchronously, so by this
+      // point `matched` reflects whether the query above actually fired. If
+      // it didn't, we're confirmed in vertical/mobile mode - resolve now
+      // rather than leaving sections waiting on a horizontal mode that will
+      // never arrive.
+      if (!matched) setResolved(true);
+
       return () => mm.revert();
     },
     { scope: wrapperRef },
   );
 
   return (
-    <HorizontalScrollContext.Provider value={{ containerAnimation }}>
+    <HorizontalScrollContext.Provider value={{ containerAnimation, resolved }}>
       <div ref={wrapperRef} className="relative">
         <div ref={trackRef} className="flex flex-col">
           {children}

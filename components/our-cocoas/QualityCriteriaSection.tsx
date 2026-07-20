@@ -23,7 +23,7 @@ const ITEM_POSITION_CLASSES = [
 export function QualityCriteriaSection() {
   const t = useTranslations();
   const qualityCriteria = t.ourCocoas.qualityCriteria;
-  const { containerAnimation } = useHorizontalScroll();
+  const { containerAnimation, resolved } = useHorizontalScroll();
 
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -56,19 +56,17 @@ export function QualityCriteriaSection() {
           .add(() => traitRef.current?.play(), "-=0.6");
       };
 
-      if (containerAnimation) {
-        playReveal();
-        return;
-      }
+      if (!resolved) return;
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top 80%",
+        containerAnimation: containerAnimation ?? undefined,
+        start: isHorizontal ? "left 80%" : "top 80%",
         once: true,
         onEnter: playReveal,
       });
     },
-    { scope: sectionRef, dependencies: [containerAnimation] },
+    { scope: sectionRef, dependencies: [containerAnimation, resolved] },
   );
 
   return (

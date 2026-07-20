@@ -16,7 +16,7 @@ const STEP_IMAGES = [
 export function ProcessStepsSection() {
   const t = useTranslations();
   const steps = t.theChain.processSteps;
-  const { containerAnimation } = useHorizontalScroll();
+  const { containerAnimation, resolved } = useHorizontalScroll();
 
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -47,19 +47,17 @@ export function ProcessStepsSection() {
         });
       };
 
-      if (containerAnimation) {
-        playReveal();
-        return;
-      }
+      if (!resolved) return;
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top 80%",
+        containerAnimation: containerAnimation ?? undefined,
+        start: isHorizontal ? "left 80%" : "top 80%",
         once: true,
         onEnter: playReveal,
       });
     },
-    { scope: sectionRef, dependencies: [containerAnimation] },
+    { scope: sectionRef, dependencies: [containerAnimation, resolved] },
   );
 
   return (
