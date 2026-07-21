@@ -97,7 +97,7 @@ export function StoryIntroSection() {
 
       <div className="relative hidden homesection:flex h-64 w-full shrink-0 homesection:h-auto homesection:w-1/2 2xl:w-[40%]">
         <Image
-          src="/images/JESSICA NANG_Plan de travail 1.webp"
+          src="/images/GREEN COMMODITIES JESSICA NANGG_Plan de travail 1.webp"
           alt=""
           fill
           sizes="(min-width: 860px) 42vw, 100vw"
